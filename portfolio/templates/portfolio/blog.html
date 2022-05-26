@@ -1,0 +1,31 @@
+<!-- blog.html -->
+
+{% extends 'portfolio/layout.html' %}
+
+{% block style %}
+
+
+{% endblock style %}
+
+
+
+{% block content %}
+    <center><h1 style="color: white;">Blog</h1></center>
+
+    {% for post in posts %}
+        <div class="post block">
+            <h2 style="color: white" class="subtitle">{{ post.title }}</h2>
+            <small style="color: white">Posted at {{ post.date_added }}</small>
+            <p style="color: white">{{ post.intro }}</p>
+
+            <a href="{% url 'portfolio:post_detail' post.slug %}">Ler mais!</a>
+        </div>
+
+
+    {% endfor %}
+
+
+
+
+
+{% endblock content %}

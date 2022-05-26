@@ -1,0 +1,131 @@
+<!-- projetos.html -->
+
+{% extends 'portfolio/layout.html' %}
+
+{% load static %}
+
+
+{% block main %}
+
+    <h2>Projetos</h2>
+    <div class="section">
+        <div class="container">
+
+
+        </div>
+    </div>
+
+    <h1 class="title">Os meus Projetos</h1>
+
+    <hr style="border-top: 1px solid #37372F">
+
+    <div class="projects">
+        <div class="project-item">
+            <img src="{% static 'portfolio/images/Gloria.png' %}">
+            <a href="#jogo-gloria" class="proj-text">
+                <p class="proj-name">Jogo da Glória</p>
+                <p class="click">Clique para mais informações</p>
+            </a>
+        </div>
+        <div class="project-item">
+            <img src="{% static 'portfolio/images/Minesweeper.png' %}">
+            <a href="#minesweeper" class="proj-text">
+                <p class="proj-name">Jogo estilo Minesweeper</p>
+                <p class="click">Clique para mais informações</p>
+            </a>
+        </div>
+        <div class="project-item">
+            <img src="{% static 'portfolio/images/Xadrez.png' %}">
+            <a href="#xadrez" class="proj-text">
+                <p class="proj-name">Xadrez</p>
+                <p class="click">Clique para mais informações</p>
+            </a>
+        </div>
+        <div class="project-item">
+            <img src="{% static 'portfolio/images/Carrinho.png' %}">
+            <a href="#carrinho" class="proj-text">
+                <p class="proj-name">Carrinho elétrico</p>
+                <p class="click">Clique para mais informações</p>
+            </a>
+        </div>
+        <div class="project-item">
+            <img src="{% static 'portfolio/images/AED.png' %}">
+            <a href="#BDJava" class="proj-text">
+                <p class="proj-name">Base de dados musical (Java)</p>
+                <p class="click">Clique para mais informações</p>
+            </a>
+        </div>
+        <div class="project-item">
+            <img src="{% static 'portfolio/images/BD.png' %}">
+            <a href="#BDSQL" class="proj-text">
+                <p class="proj-name">Base de dados musical (SQL)</p>
+                <p class="click">Clique para mais informações</p>
+            </a>
+        </div>
+        <div class="project-item">
+            <img src="{% static 'portfolio/images/SO.png' %}">
+            <a href="#SimSO" class="proj-text">
+                <p class="proj-name">Simulador SO</p>
+                <p class="click">Clique para mais informações</p>
+            </a>
+        </div>
+        <div class="project-item">
+            <img src="{% static 'portfolio/images/Fisica.png' %}">
+            <a href="#SimProj" class="proj-text">
+                <p class="proj-name">Simulador de projéteis</p>
+                <p class="click">Clique para mais informações</p>
+            </a>
+        </div>
+        <div class="project-item">
+            <img src="{% static 'portfolio/images/Rega.png' %}">
+            <a href="#Rega" class="proj-text">
+                <p class="proj-name">Sistema de Rega</p>
+                <p class="click">Clique para mais informações</p>
+            </a>
+        </div>
+    </div>
+
+    <div id="jogo-gloria">
+        <h2>> Jogo da Glória</h2>
+    </div>
+
+    <div id="minesweeper">
+        <h2>> Minesweeper</h2>
+    </div>
+
+    <div id="xadrez">
+        <h2>> Xadrez</h2>
+    </div>
+
+    <div id="carrinho">
+        <h2>> Carrinho Elétrico</h2>
+    </div>
+
+    <div id="BDJava">
+        <h2>> Base de Dados musical (Java)</h2>
+    </div>
+
+    <div id="BDSQL">
+        <h2>> Base de Dados musical (SQL)</h2>
+    </div>
+
+    <div id="SimSO">
+        <h2>> Simulador SO</h2>
+    </div>
+
+    <div id="SimProj">
+        <h2>> Simulador de projéteis</h2>
+    </div>
+
+    <div id="Rega">
+        <h2>> Sistema de Rega</h2>
+    </div>
+
+
+
+
+{% endblock main %}
+
+<link rel="stylesheet" href="{% static 'portfolio/css/projetos.css' %}">
+
+
