@@ -10726,6 +10726,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 @media screen and (min-width: 1024px) {
     .section.is-medium {
+        
         padding: 9rem 1.5rem;
     }
 
