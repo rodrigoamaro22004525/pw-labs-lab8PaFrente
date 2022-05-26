@@ -16,6 +16,14 @@
     }
 }
 
+.bg {
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 .delete, .modal-close, .button, .file, .breadcrumb, .pagination-previous,
 .pagination-next,
@@ -278,7 +286,12 @@ textarea {
 }
 
 html {
-    box-sizing: border-box;
+    background-color: black;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 *, *::before, *::after {
@@ -10738,16 +10751,6 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     background-color: #fafafa;
     padding: 3rem 1.5rem 6rem;
 }
-
-/*# sourceMappingURL=bulma.css.map */
-
-
-/*!
- *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
- */
-/* FONT PATH
- * -------------------------- */
 
 .fa {
     display: inline-block;

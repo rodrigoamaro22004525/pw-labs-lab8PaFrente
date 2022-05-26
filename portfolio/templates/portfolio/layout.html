@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 
-<html lang="">
+<html lang="" style="height: 100%">
 
 <head>
     <meta charset="UTF-16" name="viewport" content="width=device-width, initial-scale=1">
@@ -16,72 +16,76 @@
         color: white
     }
 
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
     p {
         color: white
     }</style>
 </head>
-<body style="background: black">
+<body class="bg" style="background: black">
 <nav class="navbar">
     <div class="navbar-brand">
         <a href="/" class="navbar-item" style="float: left">Rodrigo Amaro</a>
         <div>
             <a class="navbar-item" href={% url 'portfolio:home' %}><strong>Home</strong></a>
 
-             <div class="dropdown">
-                 <button class="dropbtn" onclick="myFunction()">Formação
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()">Formação
                     <i> &#8595;</i>
-                  </button>
-             <div class="dropdown-content" id="myDropdown">
-                 <a class="" style=" position: static" href={% url 'portfolio:programacao' %}><strong>Programação</strong></a>
-                 <a class="" style=" position: static" href={% url 'portfolio:virtualizacao' %}><strong>virtualizacao</strong></a>
-                 <a class="" style=" position: static" href={% url 'portfolio:reverse_Eng' %}><strong>reverse_Eng</strong></a>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a class="" style=" position: static"
+                       href={% url 'portfolio:programacao' %}><strong>Programação</strong></a>
+                    <a class="" style=" position: static"
+                       href={% url 'portfolio:virtualizacao' %}><strong>virtualizacao</strong></a>
+                    <a class="" style=" position: static"
+                       href={% url 'portfolio:reverse_Eng' %}><strong>reverse_Eng</strong></a>
+                </div>
             </div>
-        </div>
 
 
-        <script>
-        /* When the user clicks on the button,
-        toggle between hiding and showing the dropdown content */
-        function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
-        }
+            <script>
+                /* When the user clicks on the button,
+                toggle between hiding and showing the dropdown content */
+                function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
 
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(e) {
-          if (!e.target.matches('.dropbtn')) {
-          var myDropdown = document.getElementById("myDropdown");
-            if (myDropdown.classList.contains('show')) {
-              myDropdown.classList.remove('show');
-            }
-          }
-        }
-        </script>
-
-
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function (e) {
+                    if (!e.target.matches('.dropbtn')) {
+                        var myDropdown = document.getElementById("myDropdown");
+                        if (myDropdown.classList.contains('show')) {
+                            myDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            </script>
 
 
-
-
-
-
-
-        <a class="navbar-item" style="left:180%" href={% url 'portfolio:sobre' %}><strong>Sobre</strong></a>
-        <a class="navbar-item" style="left:180%" href={% url 'portfolio:contacto' %}><strong>Contacto</strong></a>
-        <a class="navbar-item" style="left:180%"
-           href={% url 'portfolio:licenciatura' %}><strong>Licenciatura</strong></a>
-        <a class="navbar-item" style="left:180%" href={% url 'portfolio:blog' %}><strong>Blog</strong></a>
+            <a class="navbar-item" style="left:180%" href={% url 'portfolio:sobre' %}><strong>Sobre</strong></a>
+            <a class="navbar-item" style="left:180%" href={% url 'portfolio:contacto' %}><strong>Contacto</strong></a>
+            <a class="navbar-item" style="left:180%"
+               href={% url 'portfolio:licenciatura' %}><strong>Licenciatura</strong></a>
+            <a class="navbar-item" style="left:180%" href={% url 'portfolio:blog' %}><strong>Blog</strong></a>
 
 
         </div>
 
     </div>
 </nav>
-<section style="height: 100%" class="section">
+
+<section class="section">
     <div class="container">
         {% block content %}
         {% endblock %}
     </div>
 </section>
+
+
 <nav class="navbar">
     <div class="navbar-brand">
         <a style="right: -2800%" href="https://www.ulusofona.pt/" class="navbar-item">ULHT</a>
@@ -91,40 +95,3 @@
 
 </html>
 
-
-<!--
-
-    <nav class="navbar" style="background-image: url( { static 'portfolio/images/headerGif.gif' %});">
-        <div class="navbar-brand" style="margin-left: 50px; width: 100%; align-items: center">
-            <a href="/">Portfolio de Rodrigo Amaro</a>
-            <nav class="" style="margin-right: 2%; margin-left: 5%; width: 50%">
-                <a href={ url 'portfolio:home' %}><strong>Home</strong></a>
-                <a href={ url 'portfolio:projeto' %}><strong>Projetos</strong></a>
-                <a href={ url 'portfolio:sobre' %}><strong>Sobre</strong></a>
-                <a href={ url 'portfolio:contacto' %}><strong>Contacto</strong></a>
-                <a href={ url 'portfolio:licenciatura' %}><strong>Licenciatura</strong></a>
-                <a href={ url 'portfolio:blog' %}><strong>Blog</strong></a>
-            </nav>
-        </div>
-    </nav>
-
-
-    <section style="height: 1000px; background: black; overflow: visible">
-        <div style="height: 100%" class="container">
-            { block content %}
-             { endblock %}
-        </div>
-
-        <footer style="bottom: 0; position: relative; margin-top: 50px; width: 100%">
-        <p style="text-align: right;color: #ffffff; padding-right: 50px; bottom:0; margin-bottom: 0; height: 50px">ULHT</p>
-        </footer>
-    </section>
-
-
-</body>
-
-
-
-</html>
-
--->
