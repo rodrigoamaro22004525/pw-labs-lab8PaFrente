@@ -7,36 +7,38 @@
 
 
 {% block content %}
+    <h3 class="titulo">Projetos</h3>
 
 
-    <h1 style="color: white">Projetos de Programação</h1>
-
-
-    <div class="container">
-
-
-        {% for projeto in Programas %}
-
+    <div class="container2">
+        {% for projeto in projetos %}
             <div>
-                <img style="color: #ffffff; width:100%" src="{{ projeto.img }}" alt="Proj">
-                <p style="color: white"> Nome: {{ projeto.nome }}  </p>
+                <p style="color: white">
+                    Autor: {{ projeto.nome }}.
+                </p>
+                <p style="color: white">
+                    Descrição: {{ projeto.descricao }}.
+                </p>
+
+                <p style="color: white">
+                    Data: {{ projeto.data }}.
+                </p>
+                <p style="color: white">
+
+                    Linguagens: {{ projeto.linguagens }}
+                </p>
+
+
+
+                <img style="color: white" src="{{ projeto.imagem.url }}" alt="Projetos">
+
             </div>
 
 
+
+
         {% endfor %}
-
-
     </div>
-
-
-    <!-- END MAIN -->
-
-
-
-
-
-
-
 
 {% endblock content %}
 

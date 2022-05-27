@@ -1,6 +1,6 @@
 from django import forms
 from .models import Comment
-from .models import Programacao
+from .models import Projetos
 
 
 class CommentForm(forms.ModelForm):
@@ -9,8 +9,26 @@ class CommentForm(forms.ModelForm):
         fields = ['name', 'email', 'body']
 
 
-class ProgramacaoForm(forms.ModelForm):
-
+class ProjetosForm(forms.ModelForm):
     class Meta:
-        model = Programacao
-        fields = ['img', 'nomeDoProjeto']
+        model = Projetos
+        fields = '__all__'
+
+        # ferramentas
+        widgets = {
+
+        }
+
+        help_texts = {
+
+        }
+
+        labels = {
+
+            'nome': 'Insira o nome',
+            'descricao': 'Insira a sua descricao',
+            'data': 'Data',
+            'linguagues': 'Linguagem usada',
+            'imagem': 'Insira a sua imagem',
+
+        }

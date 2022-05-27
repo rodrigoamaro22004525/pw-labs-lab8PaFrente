@@ -73,4 +73,4 @@ def post_detail(request, slug):
 def programacao_page_view(request):
     projetos = {'programacao': Programacao.objects.all()}
 
-    return render(request, 'portfolio/programacao.html', {'projetos': projetos})
+    return render(request, 'portfolio/programacao.html', projetos)

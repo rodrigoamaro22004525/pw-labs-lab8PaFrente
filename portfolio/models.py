@@ -31,9 +31,12 @@ class Comment(models.Model):
         ordering = ['date_added']
 
 
-class Programacao(models.Model):
-    img = models.ImageField(upload_to="media/", null=True)
-    nomeDoProjeto = models.CharField(max_length=255)
+class Projetos(models.Model):
+    nome = models.CharField(max_length=50, related_name='nomeDoAutor', on_delete=models.CASCADE)
+    descricao = models.CharField(max_length=300)
+    data = models.IntegerField(max_length=20)
+    linguagens = models.CharField(max_length=50)
+    imagem = models.ImageField(upload_to='media/', null=True)
 
     def __str__(self):
         return f"{self.nome}"
