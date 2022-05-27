@@ -1,0 +1,82 @@
+
+* {
+    font-family: "Lucida Console", monospace;
+    font-size: 17px;
+    background: white;
+}
+
+h2 {
+    color: white;
+    font-color: white;
+    font-family: "Lucida Console", monospace;
+}
+
+small {
+    color: white;
+    font-color: white;
+    font-family: "Lucida Console", monospace;
+}
+
+p {
+    color: white;
+    font-color: white;
+    font-family: "Lucida Console", monospace;
+}
+
+
+* {
+    font-color: white;
+    color: #ffffff;
+    background-image: url("../images/headerGif.gif");
+}
+
+.direita {
+    justify-content: flex-end;
+}
+
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    background-image: url("../images/headerGif.gif");
+}
+
+head > div {
+    position: fixed;
+    color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    right: 0;
+    width: 100%;
+}
+
+div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+div ol li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+div ol li a{
+    color: ghostwhite;
+    text-decoration: dotted;
+    margin: 10px;
+}
+
+li a:hover{color: lightcyan;}
+li a:visited{color: blue;}
+li a:active{color: aquamarine}
+
+
+.image{width: 100%;}
+
+

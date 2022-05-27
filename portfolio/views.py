@@ -1,6 +1,11 @@
 from django.shortcuts import render, redirect
-from .models import Post
+from django.urls import reverse
+
 from .forms import CommentForm
+from .forms import ProgramacaoForm
+
+from .models import Post
+from portfolio.models import Programacao
 
 
 # Create your views here.
@@ -16,11 +21,6 @@ def apresentacao_page_view(request):
 # Sobre
 def sobre_page_view(request):
     return render(request, 'portfolio/sobre.html')
-
-
-# Projetos
-def projeto_page_view(request):
-    return render(request, 'portfolio/projetos.html')
 
 
 # Contacto
@@ -39,15 +39,16 @@ def blog_page_view(request):
 
     return render(request, 'portfolio/blog.html', {'posts': posts})
 
+
 # virtualização
 def virtualizacao_page_view(request):
-
     return render(request, 'portfolio/virtualizacao.html')
+
 
 # Reverse-Eng
 def reverse_page_view(request):
-
     return render(request, 'portfolio/reverse.html')
+
 
 # detail
 def post_detail(request, slug):
@@ -70,5 +71,6 @@ def post_detail(request, slug):
 
 # projetos/programação
 def programacao_page_view(request):
+    projetos = {'programacao': Programacao.objects.all()}
 
-    return render(request, 'portfolio/projetos.html/programacao.html')
+    return render(request, 'portfolio/programacao.html', {'projetos': projetos})

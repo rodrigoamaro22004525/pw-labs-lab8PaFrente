@@ -2,19 +2,41 @@
 
 {% extends 'portfolio/layout.html' %}
 
-{% block style %}
 
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/sobre.css' %}"/>
-
-{% endblock style %}
+{% load static %}
 
 
-{% block main %}
-
-    <h1>Content soon™</h1>
+{% block content %}
 
 
+    <h1 style="color: white">Projetos de Programação</h1>
 
 
-{% endblock main %}
+    <div class="container">
+
+
+        {% for projeto in Programas %}
+
+            <div>
+                <img style="color: #ffffff; width:100%" src="{{ projeto.img }}" alt="Proj">
+                <p style="color: white"> Nome: {{ projeto.nome }}  </p>
+            </div>
+
+
+        {% endfor %}
+
+
+    </div>
+
+
+    <!-- END MAIN -->
+
+
+
+
+
+
+
+
+{% endblock content %}
+

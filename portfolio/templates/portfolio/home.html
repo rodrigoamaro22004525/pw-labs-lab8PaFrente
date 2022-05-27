@@ -14,17 +14,17 @@
 
     <h2 style="color: white">Bem Vindo ao meu Portfolio!</h2><hr>
 
-    <center><a href="{% url 'portfolio:projeto' %}" ><h2 style="color: white; margin-bottom: 0">Programação</h2></a><br></center>
+    <center><a href="{% url 'portfolio:programacao' %}" ><h2 style="color: white; margin-bottom: 0">Programação</h2></a><br></center>
 
     {% load static %}
-    <img class="image" src="{% static 'portfolio/images/Csharp.png' %}" alt="{% url 'portfolio:projeto' %}">
+    <img class="image" src="{% static 'portfolio/images/Csharp.png' %}" alt="{% url 'portfolio:programacao' %}">
 
     <br><br><br>
 
-    <center><a href="{% url 'portfolio:projeto' %}" ><h2 style="color: white; margin-bottom: 0">Virtualização</h2></a><br></center>
+    <center><a href="{% url 'portfolio:virtualizacao' %}" ><h2 style="color: white; margin-bottom: 0">Virtualização</h2></a><br></center>
 
     {% load static %}
-    <img class="image" style="width: 100%" src="{% static 'portfolio/images/Containers.png'%} " alt="{% url 'portfolio:projeto' %}">
+    <img class="image" style="width: 100%" src="{% static 'portfolio/images/Containers.png'%} " alt="{% url 'portfolio:virtualizacao' %}">
 
     <br><br><br>
 
@@ -35,7 +35,7 @@
 
 
 
-{% endblock %}
+{% endblock content %}
 
 
 

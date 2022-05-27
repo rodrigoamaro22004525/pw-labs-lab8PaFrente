@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+
+
 class Portfolio(models.Model):
     name = models.CharField(max_length=100)
     id = models.CharField(max_length=8, primary_key=True)
@@ -27,5 +29,14 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ['date_added']
+
+
+class Programacao(models.Model):
+    img = models.ImageField(upload_to="media/", null=True)
+    nomeDoProjeto = models.CharField(max_length=255)
+
+    def __str__(self):
+        return f"{self.nome}"
+
 
 
