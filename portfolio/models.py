@@ -32,7 +32,7 @@ class Comment(models.Model):
 
 
 class Projetos(models.Model):
-    nome = models.CharField(max_length=50, related_name='nomeDoAutor', on_delete=models.CASCADE)
+    nome = models.CharField(max_length=50)
     descricao = models.CharField(max_length=300)
     data = models.IntegerField(max_length=20)
     linguagens = models.CharField(max_length=50)

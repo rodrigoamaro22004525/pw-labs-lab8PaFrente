@@ -2,10 +2,9 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 
 from .forms import CommentForm
-from .forms import ProgramacaoForm
 
 from .models import Post
-from portfolio.models import Programacao
+from portfolio.models import Projetos
 
 
 # Create your views here.
@@ -71,6 +70,6 @@ def post_detail(request, slug):
 
 # projetos/programação
 def programacao_page_view(request):
-    projetos = {'programacao': Programacao.objects.all()}
+    projetos = {'programacao': Projetos.objects.all()}
 
     return render(request, 'portfolio/programacao.html', projetos)
