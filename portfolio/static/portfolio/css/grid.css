@@ -1,11 +1,11 @@
-.container {
+.container2 {
     display: block;
     justify-content: center;
 
 
 
 }
-.container img{
+.container2 img{
     height: 300px;
     width: auto;
     position: relative;
@@ -15,7 +15,7 @@
 
 }
 
-.container > div {
+.container2 > div {
   width: 70%;
   padding: 2%;
   margin-top: 3%;
