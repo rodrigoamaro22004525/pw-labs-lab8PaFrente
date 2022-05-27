@@ -45,9 +45,9 @@ def virtualizacao_page_view(request):
     return render(request, 'portfolio/virtualizacao.html')
 
 # Reverse-Eng
-def reverse_Eng_page_view(request):
+def reverse_page_view(request):
 
-    return render(request, 'portfolio/reverse_Eng')
+    return render(request, 'portfolio/reverse.html')
 
 # detail
 def post_detail(request, slug):

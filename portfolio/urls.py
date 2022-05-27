@@ -35,6 +35,6 @@ urlpatterns = [
                   path('<slug:slug>/', views.post_detail, name='post_detail'),
                   path('programacao', views.programacao_page_view, name='programacao'),
                   path('virtualizacao', views.virtualizacao_page_view, name='virtualizacao'),
-                  path('reverse_Eng', views.reverse_Eng_page_view , name='reverse_Eng'),
+                  path('reverse', views.reverse_page_view, name='reverse'),
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 # não tendo este static em cima fez com que eu não pudesse fazer nada e tive que refazer o código todo
