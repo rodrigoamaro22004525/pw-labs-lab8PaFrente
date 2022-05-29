@@ -40,12 +40,10 @@ class Projetos(models.Model):
 
 class PontuacaoQuizz(models.Model):
     nome = models.CharField(max_length=50)
-    pergunta = models.CharField(max_length=100, null=True)
-    op1 = models.CharField(max_length=100, null=True)
-    op2 = models.CharField(max_length=100, null=True)
-    op3 = models.CharField(max_length=100, null=True)
-    op4 = models.CharField(max_length=100, null=True)
-    rep = models.CharField(max_length=100, null=True)
+    pergunta_1 = models.CharField(null=True, max_length=200)
+    pergunta_2 = models.CharField(null=True, max_length=200)
+    pergunta_3 = models.CharField(null=True, max_length=200)
+    pergunta_4 = models.CharField(null=True, max_length=200)
 
     def __str__(self):
         return self.nome

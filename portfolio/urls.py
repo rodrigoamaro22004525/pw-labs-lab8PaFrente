@@ -25,7 +25,7 @@ app_name = 'portfolio'
 name = "home"
 
 urlpatterns = [
-                  path('', views.home_page_view),
+                  path('', views.home_page_view, name=''),
                   path('home/', views.home_page_view, name='home'),
                   path('sobre/', views.sobre_page_view, name='sobre'),
                   path('contacto/', views.contacto_page_view, name='contacto'),
@@ -35,13 +35,12 @@ urlpatterns = [
                   path('programacao/', views.programacao_page_view, name='programacao'),
                   path('virtualizacao/', views.virtualizacao_page_view, name='virtualizacao'),
                   path('reverse/', views.reverse_page_view, name='reverse'),
-                  path('quizz/', views.quizz_page_view, name='quizz'),
                   path('addQuestion/', views.addQuestion, name='addQuestion'),
                   path('login/', views.login_page_view, name='login'),
                   path('logout/', views.logoutPage, name='logout'),
                   path('register/', views.registerPage, name='register'),
                   path('addQuestion/', views.addQuestion, name='addQuestion'),
-                  path('result', views.resultPage, name='result'),
+                  path('quizz/', views.quizz_page_view, name='quizz'),
               ] \
               + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 # não tendo este static em cima fez com que eu não pudesse fazer nada e tive que refazer o código todo

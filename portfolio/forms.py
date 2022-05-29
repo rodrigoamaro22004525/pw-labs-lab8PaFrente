@@ -69,3 +69,19 @@ class PontuacaoQuizzForm(ModelForm):
     class Meta:
         model = PontuacaoQuizz
         fields = "__all__"
+
+        """
+            Pergunta_1 -> Qual o animal que a google aluga para o seu uso (cabra)
+            Pergunta_2 -> Quando foi inventado o Keyboard do estilo QWERTY (1868)
+            Pergunta_3 -> De que material foi feito o primeiro rato (madeira)
+            Pergunta_4 -> Qual foi o primeiro tweet da google? (I’m 01100110 01100101 01100101 01101100 01101001 01101110 01100111 00100000 01101100 01110101 01100011 01101011 01111001 00001010)
+        """
+        labels = {
+            'nome': 'Nome',
+            'Pergunta_1': 'Qual o animal que a google aluga para o seu uso',
+            'Pergunta_2': 'Quando foi inventado o Keyboard do estilo QWERTY',
+            'Pergunta_3': 'De que material foi feito o primeiro rato',
+            'Pergunta_4': 'Qual foi o primeiro tweet da google?',
+        }
+
+        help_texts = {}

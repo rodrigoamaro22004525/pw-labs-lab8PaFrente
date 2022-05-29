@@ -1,60 +1,54 @@
 {% extends 'portfolio/layout.html' %}
 
+
+{% load static %}
+
+
 {% block content %}
-    {% load static %}
+
     <div class="">
     <h1 style="color: white">Quizz sections</h1>
 
     <div style="display: block;height: 700px;       border-radius: 10px;        margin: 20px;        background-color: #aba6a6;        border-bottom-color: #b22121;        border-bottom-style: double;      box-shadow: rgba(129, 29, 29, 0.8) 5px 5px, rgb(77, 19, 19) 10px 10px;padding-top: 250px;">
-    <div class="container ">
 
-
-        <form method='post' action=''>
+     <div class="quiz">
+        <h1>Web Programming Quiz</h1>
+        {% load static %}
+        <link href={% static 'portfolio/images/graf.PNG' %}>
+        <h2>{{vencedorNome}}</h2>
+        <form action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            {% for q  in perguntas %}
-                <div class="form-group">
-                    <label for="question">{{ q.question }}</label>
-                </div>
-                <div class="form-check">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="{{ q.question }}" id="gridRadios1"
-                               value="option1" checked>
-                        <label class="form-check-label" for="gridRadios1">
-                            {{ q.op1 }}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="{{ q.question }}" id="gridRadios2"
-                               value="option2">
-                        <label class="form-check-label" for="gridRadios2">
-                            {{ q.op2 }}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="{{ q.question }}" id="gridRadios1"
-                               value="option3">
-                        <label class="form-check-label" for="gridRadios1">
-                            {{ q.op3 }}
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="{{ q.question }}" id="gridRadios2"
-                               value="option4">
-                        <label class="form-check-label" for="gridRadios2">
-                            {{ q.op4 }}
-                        </label>
-                    </div>
-                    <br>
-                </div>
-            {% endfor %}
-            <input id='timer' type='hidden' name="timer" value="">
-            <br>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+            {{ form.as_p }}
+
+
+            <input type="submit" value="Submit" class="btn btn-success" >
+
 
     </div>
+
+
     </div>
 {% endblock %}
 
+ <!--
+        vencedorNome = ""
+    for quiz in PontuacaoQuizz.objects.all():
+        print("#####")
+        print(quiz.name)
+        vencedorNome += quiz.name + "; "
+    print(vencedorNome)
 
-</div>
+    desenha_grafico_resultados(PontuacaoQuizz.objects.all())
+
+    form = PontuacaoQuizzForm(request.POST)
+    if form.is_valid():
+        form.save()
+        return redirect(request.path_info)
+
+    context = {
+        'form': form,
+        'vencedorNome': vencedorNome
+    }
+
+    return render(request, 'portfolio/quizz.html', context) -->
+

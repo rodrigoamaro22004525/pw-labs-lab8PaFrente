@@ -3,9 +3,10 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib.auth import login, logout, authenticate
 
-
 from .forms import *
 from .models import *
+
+from .functions import desenha_grafico_resultados
 
 
 # Create your views here.
@@ -78,45 +79,6 @@ def programacao_page_view(request):
     return render(request, 'portfolio/programacao.html', projetos)
 
 
-def quizz_page_view(request):
-    return render(request, 'portfolio/quizz.html')
-
-
-def quizz(request):
-    if request.method == 'POST':
-        print(request.POST)
-        perg = PontuacaoQuizz.objects.all()
-        score = 0
-        errado = 0
-        certo = 0
-        total = 0
-        for q in perg:
-            total += 1
-            print(request.POST.get(q.pergunta))
-            print(q.rep)
-            print()
-            if q.rep == request.POST.get(q.pergunta):
-                score += 10
-                certo += 1
-            else:
-                errado += 1
-        porcento = score / (total * 10) * 100
-        context = {
-            'score': score,
-            'correct': certo,
-            'wrong': errado,
-            'percent': porcento,
-            'total': total
-        }
-        return render(request, 'portfolio/result.html', context)
-    else:
-        perg = PontuacaoQuizz.objects.all()
-        context = {
-            'perguntas': perg
-        }
-        return render(request, 'portfolio/home.html', context)
-
-
 def addQuestion(request):
     if request.user.is_staff:
         form = PontuacaoQuizzForm()
@@ -168,43 +130,24 @@ def logoutPage(request):
     return redirect('/')
 
 
-def grafico_quiz_data(objects):
-    data = {}
-    for quizz in objects:
-        data[quizz.nome] = PontuacaoQuizz(quizz)
-        print(quizz.nome)
+def quizz_page_view(request):
+    vencedorNome = ""
+    for quizz in PontuacaoQuizz.objects.all():
+        print("#####")
+        print(quizz.name)
+        vencedorNome += quizz.name + "; "
+    print(vencedorNome)
 
-    return data
+    desenha_grafico_resultados(PontuacaoQuizz.objects.all())
 
+    form = PontuacaoQuizzForm(request.POST)
+    if form.is_valid():
+        form.save()
+        return redirect(request.path_info)
 
-def grafico_quiz(objects):
-    data = grafico_quiz_data(objects)
-    users = list(data.keys())
-    values = list(data.values())
+    context = {
+        'form': form,
+        'vencedorNome': vencedorNome
+    }
 
-    plt.bar(users, values, color='green', width=0.5)
-
-    plt.xlabel("Jogadores")
-    plt.ylabel("Pontuação")
-    plt.title("Quiz Programação Web")
-    plt.savefig('portfolio/static/portfolio/images/grafico.png')
-
-
-def resultPage(request, nome):
-    post = Post.objects.get(nome=nome or None)
-
-    if request.method == 'POST':
-        form = PontuacaoQuizzForm(request.POST or None, request.FILES)
-
-        if form.is_valid():
-            PontuacaoQuizz = form.save(commit=False)
-            PontuacaoQuizz.post = post
-            PontuacaoQuizz.save()
-
-        return redirect('portfolio:quizz', nome=post.nome)
-    else:
-        form = PontuacaoQuizzForm()
-
-    return render(request, 'portfolio/quizz.html', {'post': post, 'form': form})
-
-
+    return render(request, 'portfolio/quizz.html', context)
