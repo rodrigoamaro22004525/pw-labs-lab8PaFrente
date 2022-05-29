@@ -1,0 +1,35 @@
+{% extends 'portfolio/layout.html' %}
+
+{% load static %}
+<style>
+    .containerLargeAF {
+
+
+    }
+
+
+    .containerLargeAF {
+        vertical-align: center;
+    }
+</style>
+
+
+{% block content %}
+    <div  style="">
+        <h1 style="color: white"> Login </h1>
+        <form method="POST" class="containerLargeAF"
+              style="display: block;height: 700px;       border-radius: 10px;        margin: 20px;        background-color: #ffffff;        border-bottom-color: #b22121;        border-bottom-style: double;      box-shadow: rgba(129, 29, 29, 0.8) 5px 5px, rgb(77, 19, 19) 10px 10px;padding-top: 250px;">
+            {% csrf_token %}
+            <center><p style="color:black;">Login <input type="text" name="username" placeholder=" Username..."></p></center>
+            <br><br><br>
+            <center><p style="color:black;">Password <input type="password" name="password" placeholder=" Password..."></p></center>
+            <br><br><br>
+            <center><input class="btn btn-success" type="submit" value="Login"></center>
+            <br><br><br>
+            <center><p style="color: black">Do not have an account?</p></center>
+            <br>
+            <center><a style="" href='{% url 'portfolio:register' %}'>Register</a></center>
+
+        </form>
+    </div>
+{% endblock %}

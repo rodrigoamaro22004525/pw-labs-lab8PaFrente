@@ -1846,6 +1846,7 @@ fieldset[disabled] .button {
     margin: 0 auto;
     position: relative;
     width: auto;
+
 }
 
 .container.is-fluid {
@@ -3058,6 +3059,10 @@ a.tag:hover {
     word-break: break-word;
 }
 
+#veryUniqueClass{
+    display: block;justify-content: center;border-radius: 10px;margin: 20px;background-color: #ffffff;border-bottom-color: #b22121;border-bottom-style: double;box-shadow: rgba(129,29,29,0.8) 5px 5px, rgb(77,19,19) 10px 10px;padding: 15px;
+}
+
 .title em,
 .title span,
 .subtitle em,
@@ -4153,10 +4158,11 @@ fieldset[disabled] .select select:hover {
 }
 
 .label {
-    color: #363636;
+    color: #000000;
     display: block;
     font-size: 1rem;
     font-weight: 700;
+    font-color: black;
 }
 
 .label:not(:last-child) {
@@ -4600,6 +4606,8 @@ fieldset[disabled] .select select:hover {
     max-width: 100%;
     overflow: hidden;
     position: relative;
+    height: 1000px;
+    padding: 15% 600px;
 }
 
 .card-header {

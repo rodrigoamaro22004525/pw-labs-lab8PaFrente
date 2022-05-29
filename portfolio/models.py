@@ -9,9 +9,9 @@ class Portfolio(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=300, unique=True)
-    slug = models.SlugField()
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='portfolio_post')
-    body = models.TextField()
+    slug = models.SlugField(None)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    body = models.TextField(None)
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -35,4 +35,20 @@ class Projetos(models.Model):
     imagem = models.ImageField(upload_to='media/', null=True)
 
     def __str__(self):
-        return f"{self.nome}"
+        return self.nome
+
+
+class PontuacaoQuizz(models.Model):
+    nome = models.CharField(max_length=50)
+    pergunta = models.CharField(max_length=100, null=True)
+    op1 = models.CharField(max_length=100, null=True)
+    op2 = models.CharField(max_length=100, null=True)
+    op3 = models.CharField(max_length=100, null=True)
+    op4 = models.CharField(max_length=100, null=True)
+    rep = models.CharField(max_length=100, null=True)
+
+    def __str__(self):
+        return self.nome
+
+
+

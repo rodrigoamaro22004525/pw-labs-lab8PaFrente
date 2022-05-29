@@ -1,31 +1,14 @@
 .container2 {
     display: block;
     justify-content: center;
-
-
-
-}
-.container2 img{
-    height: 300px;
-    width: auto;
-    position: relative;
-    bottom: 90px;
-   left: 106%;
+    border-radius: 10px;
+    margin: 20px;
+    background-color: white;
+    border-bottom-color: #00b89c;
+    border-bottom-style: double
 
 
 }
 
-.container2 > div {
-  width: 70%;
-  padding: 2%;
-  margin-top: 3%;
-  margin-left: 2%;
-  margin-bottom: 2%;
-
-  background-color: #ffffff;
-  box-shadow: rgba(57, 58, 50, 0.8) 5px 5px, rgba(39, 40, 98, 0.6) 10px 10px, rgba(23, 10, 128, 0.4) 15px 15px, rgba(131, 70, 102, 0.2) 20px 20px;
-  height: 250px;
-  border-radius: 10px;
-}
 
 

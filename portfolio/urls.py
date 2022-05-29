@@ -17,22 +17,31 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
 from . import views
+from django.contrib import admin
 
-from portfolio.views import post_detail, blog_page_view
+from portfolio.views import *
 
 app_name = 'portfolio'
 name = "home"
 
 urlpatterns = [
                   path('', views.home_page_view),
-                  path('home', views.home_page_view, name='home'),
-                  path('sobre', views.sobre_page_view, name='sobre'),
-                  path('contacto', views.contacto_page_view, name='contacto'),
-                  path('licenciatura', views.licenciatura_page_view, name='licenciatura'),
-                  path('blog', views.blog_page_view, name='blog'),
-                  path('<slug:slug>/', views.post_detail, name='post_detail'),
-                  path('programacao', views.programacao_page_view, name='programacao'),
-                  path('virtualizacao', views.virtualizacao_page_view, name='virtualizacao'),
-                  path('reverse', views.reverse_page_view, name='reverse'),
-              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+                  path('home/', views.home_page_view, name='home'),
+                  path('sobre/', views.sobre_page_view, name='sobre'),
+                  path('contacto/', views.contacto_page_view, name='contacto'),
+                  path('licenciatura/', views.licenciatura_page_view, name='licenciatura'),
+                  path('blog/', views.blog_page_view, name='blog'),
+                  path('post_detail/<slug:slug>/', views.post_detail, name='post_detail'),
+                  path('programacao/', views.programacao_page_view, name='programacao'),
+                  path('virtualizacao/', views.virtualizacao_page_view, name='virtualizacao'),
+                  path('reverse/', views.reverse_page_view, name='reverse'),
+                  path('quizz/', views.quizz_page_view, name='quizz'),
+                  path('addQuestion/', views.addQuestion, name='addQuestion'),
+                  path('login/', views.login_page_view, name='login'),
+                  path('logout/', views.logoutPage, name='logout'),
+                  path('register/', views.registerPage, name='register'),
+                  path('addQuestion/', views.addQuestion, name='addQuestion'),
+                  path('result', views.resultPage, name='result'),
+              ] \
+              + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 # não tendo este static em cima fez com que eu não pudesse fazer nada e tive que refazer o código todo
