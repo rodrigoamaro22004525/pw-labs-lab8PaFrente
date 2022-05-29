@@ -44,3 +44,8 @@ urlpatterns = [
               ] \
               + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 # não tendo este static em cima fez com que eu não pudesse fazer nada e tive que refazer o código todo
+
+#para imagens
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

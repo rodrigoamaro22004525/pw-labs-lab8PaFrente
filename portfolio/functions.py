@@ -1,4 +1,3 @@
-# importing the required module
 import matplotlib.pyplot as plt
 
 """
@@ -25,7 +24,7 @@ plt.show()
 
 
 
-def ScoreDoUser(quiz):
+def ScoreDoUser(quizz):
     score = 0
 
     """
@@ -35,16 +34,16 @@ def ScoreDoUser(quiz):
     Pergunta_4 -> Qual foi o primeiro tweet da google? (I’m 01100110 01100101 01100101 01101100 01101001 01101110 01100111 00100000 01101100 01110101 01100011 01101011 01111001 00001010)
     """
 
-    if quiz.questao_1 == "cabra":
+    if quizz.Q1 == "cabra":
         score += 1
 
-    if quiz.questao_2 == 1868:
+    if quizz.Q2 == "1868":
         score += 1
 
-    if quiz.questao_3 == "madeira":
+    if quizz.Q3 == "madeira":
         score += 1
 
-    if quiz.questao_4 == "I’m 01100110 01100101 01100101 01101100 01101001 01101110 01100111 00100000 01101100 01110101 01100011 01101011 01111001 00001010":
+    if quizz.Q4 == "I’m 01100110 01100101 01100101 01101100 01101001 01101110 01100111 00100000 01101100 01110101 01100011 01101011 01111001 00001010":
         score += 1
 
     return score
@@ -53,8 +52,8 @@ def ScoreDoUser(quiz):
 def dadosDoQuiz(objects):
     data = {}
     for quizz in objects:
-        data[quizz.nome] = ScoreDoUser(quizz)
-        print(quizz.nome)
+        data[quizz.name] = ScoreDoUser(quizz)
+        print(quizz.name)
 
     return data
 
@@ -64,9 +63,11 @@ def desenha_grafico_resultados(objects):
     users = list(data.keys())
     values = list(data.values())
 
+    fig = plt.figure(figsize=(10, 5))
+
     plt.bar(users, values, color='white', width=0.5)
 
-    plt.xlabel("Users")
-    plt.ylabel("Score")
+    plt.xlabel("users")
+    plt.ylabel("score")
     plt.title("Quizz De PW")
     plt.savefig('portfolio/static/portfolio/images/graf.PNG')

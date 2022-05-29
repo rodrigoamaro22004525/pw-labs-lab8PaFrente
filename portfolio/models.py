@@ -38,15 +38,17 @@ class Projetos(models.Model):
         return self.nome
 
 
-class PontuacaoQuizz(models.Model):
-    nome = models.CharField(max_length=50)
-    pergunta_1 = models.CharField(null=True, max_length=200)
-    pergunta_2 = models.CharField(null=True, max_length=200)
-    pergunta_3 = models.CharField(null=True, max_length=200)
-    pergunta_4 = models.CharField(null=True, max_length=200)
+class pontuacaoquizz(models.Model):
+    nome = models.CharField(null=True, max_length=50)
 
-    def __str__(self):
-        return self.nome
+    Q1 = models.CharField(null=True, max_length=200)
+    Q2 = models.CharField(null=True, max_length=200)
+    Q3 = models.CharField(null=True, max_length=200)
+    Q4 = models.CharField(null=True, max_length=200)
 
-
-
+    """
+        Q1 -> Qual o animal que a google aluga para o seu uso (cabra)
+        Q2 -> Quando foi inventado o Keyboard do estilo QWERTY (1868)
+        Q3 -> De que material foi feito o primeiro rato (madeira)
+        Q4 -> Qual foi o primeiro tweet da google? (I’m 01100110 01100101 01100101 01101100 01101001 01101110 01100111 00100000 01101100 01110101 01100011 01101011 01111001 00001010)
+        """

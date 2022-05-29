@@ -7,4 +7,4 @@ from .models import *
 admin.site.register(Comment)
 admin.site.register(Post)
 admin.site.register(Projetos)
-admin.site.register(PontuacaoQuizz)
+admin.site.register(pontuacaoquizz)

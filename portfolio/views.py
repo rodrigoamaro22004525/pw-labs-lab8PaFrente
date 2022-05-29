@@ -1,4 +1,6 @@
+import self as self
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib.auth import login, logout, authenticate
@@ -130,24 +132,20 @@ def logoutPage(request):
     return redirect('/')
 
 
+@login_required
 def quizz_page_view(request):
-    vencedorNome = ""
-    for quizz in PontuacaoQuizz.objects.all():
-        print("#####")
-        print(quizz.name)
-        vencedorNome += quizz.name + "; "
-    print(vencedorNome)
 
-    desenha_grafico_resultados(PontuacaoQuizz.objects.all())
 
     form = PontuacaoQuizzForm(request.POST)
-    if form.is_valid():
-        form.save()
-        return redirect(request.path_info)
+    if request.method == 'POST':
 
-    context = {
-        'form': form,
-        'vencedorNome': vencedorNome
-    }
+        if form.is_valid():
+            form.nome = request.user
+            #form.save() o save não está a funcionar...
+            return HttpResponseRedirect(request.path_info)
 
-    return render(request, 'portfolio/quizz.html', context)
+    else:
+        context = {
+            'form': form,
+        }
+        return render(request, 'portfolio/quizz.html', context)
