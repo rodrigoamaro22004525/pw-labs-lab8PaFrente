@@ -4157,6 +4157,10 @@ fieldset[disabled] .select select:hover {
     font-size: 14px;
 }
 
+ul li{
+    visibility: hidden;
+}
+
 .label {
     color: #000000;
     display: block;

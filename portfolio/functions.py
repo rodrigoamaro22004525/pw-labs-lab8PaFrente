@@ -65,7 +65,7 @@ def desenha_grafico_resultados(objects):
 
     fig = plt.figure(figsize=(10, 5))
 
-    plt.bar(users, values, color='white', width=0.5)
+    plt.bar(users, values, color='blue', width=0.5)
 
     plt.xlabel("users")
     plt.ylabel("score")

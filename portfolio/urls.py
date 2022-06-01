@@ -35,11 +35,9 @@ urlpatterns = [
                   path('programacao/', views.programacao_page_view, name='programacao'),
                   path('virtualizacao/', views.virtualizacao_page_view, name='virtualizacao'),
                   path('reverse/', views.reverse_page_view, name='reverse'),
-                  path('addQuestion/', views.addQuestion, name='addQuestion'),
                   path('login/', views.login_page_view, name='login'),
                   path('logout/', views.logoutPage, name='logout'),
                   path('register/', views.registerPage, name='register'),
-                  path('addQuestion/', views.addQuestion, name='addQuestion'),
                   path('quizz/', views.quizz_page_view, name='quizz'),
               ] \
               + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

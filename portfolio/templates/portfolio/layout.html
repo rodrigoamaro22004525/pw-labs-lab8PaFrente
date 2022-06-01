@@ -86,17 +86,15 @@
 
             {% if not request.user.is_authenticated %}
                 <a class="navbar-item" style="left:180%" href={% url 'portfolio:login' %}><strong>login</strong></a>
+            {% endif %}
+
+            {% if not request.user.is_authenticated %}
                 <a class="navbar-item" style="left:180%"
                    href={% url 'portfolio:register' %}><strong>register</strong></a>
             {% endif %}
 
             {% if request.user.is_authenticated %}
                 <a class="navbar-item" style="left:180%" href={% url 'portfolio:logout' %}><strong>logout</strong></a>
-            {% endif %}
-
-            {% if request.user.is_staff %}
-                <a class="navbar-item" style="left:180%" href={% url 'portfolio:addQuestion' %}><strong>Add
-                    Question</strong></a>
             {% endif %}
 
 

@@ -1,13 +1,17 @@
+import self
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib.auth import login, logout, authenticate
+from django.conf import settings
 
 from .forms import *
 from .models import *
 
 from .functions import desenha_grafico_resultados
+
+from django.contrib import messages
 
 
 # Create your views here.
@@ -80,20 +84,6 @@ def programacao_page_view(request):
     return render(request, 'portfolio/programacao.html', projetos)
 
 
-def addQuestion(request):
-    if request.user.is_staff:
-        form = PontuacaoQuizzForm()
-        if request.method == 'POST':
-            form = PontuacaoQuizzForm(request.POST)
-            if form.is_valid():
-                form.save()
-                return redirect('/')
-        context = {'form': form}
-        return render(request, 'portfolio/addQuestion.html', context)
-    else:
-        return redirect('portfolio:home')
-
-
 def registerPage(request):
     if request.user.is_authenticated:
         return redirect('portfolio:home')
@@ -131,20 +121,27 @@ def logoutPage(request):
     return redirect('/')
 
 
-@login_required
 def quizz_page_view(request):
-    desenha_grafico_resultados(pontuacaoquizz.objects.all())
-    form = PontuacaoQuizzForm(request.POST)
+    if not request.user.is_authenticated:
+        messages.error(request, 'Utilizador não efetuou login')
 
-    if request.method == 'POST':
-
-        if form.is_valid():
-            form.nome = request.user
-            form.save()
-            return HttpResponseRedirect(request.path_info)
-
+        return redirect('portfolio:home')
     else:
-        context = {
-            'form': form,
-        }
-        return render(request, 'portfolio/quizz.html', context)
+        form = PontuacaoQuizzForm(request.POST)
+        user = User.objects.get(username=request.user.get_username())
+
+        if request.method == 'POST':
+            if form.is_valid():
+                form = form.save(commit=False)
+
+                form.name = user.username
+
+                form.save()
+                desenha_grafico_resultados(pontuacaoquizz.objects.all())
+                return HttpResponseRedirect(request.path_info)
+
+        else:
+            context = {
+                'form': form,
+            }
+            return render(request, 'portfolio/quizz.html', context)
