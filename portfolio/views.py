@@ -1,4 +1,3 @@
-
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
@@ -134,14 +133,12 @@ def logoutPage(request):
 
 @login_required
 def quizz_page_view(request):
-
-
     form = PontuacaoQuizzForm(request.POST)
     if request.method == 'POST':
 
         if form.is_valid():
             form.nome = request.user
-            #form.save() o save não está a funcionar...
+            # form.save() o save não está a funcionar...
             return HttpResponseRedirect(request.path_info)
 
     else:
