@@ -39,12 +39,17 @@ class Projetos(models.Model):
 
 
 class pontuacaoquizz(models.Model):
-    nome = models.CharField(null=True, max_length=50)
+    name = models.CharField(max_length=50)
 
     Q1 = models.CharField(null=True, max_length=200)
     Q2 = models.CharField(null=True, max_length=200)
     Q3 = models.CharField(null=True, max_length=200)
     Q4 = models.CharField(null=True, max_length=200)
+
+
+    def __str__(self):
+        return f"{self.name}"
+
 
     """
         Q1 -> Qual o animal que a google aluga para o seu uso (cabra)

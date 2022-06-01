@@ -133,12 +133,14 @@ def logoutPage(request):
 
 @login_required
 def quizz_page_view(request):
+    desenha_grafico_resultados(pontuacaoquizz.objects.all())
     form = PontuacaoQuizzForm(request.POST)
+
     if request.method == 'POST':
 
         if form.is_valid():
             form.nome = request.user
-            # form.save() o save não está a funcionar...
+            form.save()
             return HttpResponseRedirect(request.path_info)
 
     else:
