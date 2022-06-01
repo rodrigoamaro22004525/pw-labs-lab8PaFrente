@@ -12,6 +12,7 @@ gunicorn = "==19.9.0"
 flask = "*"
 pillow = "*"
 matplotlib = "*"
+self = "*"
 
 [dev-packages]
 
