@@ -10,9 +10,8 @@
     <div style="padding-left: 150px; padding-top: 50px ;display: block; background:#aba6a6 ;height: 900px;       border-radius: 10px;        margin: 20px;        border-bottom-color: #b22121;        border-bottom-style: double;      box-shadow: rgba(129, 29, 29, 0.8) 5px 5px, rgb(77, 19, 19) 10px 10px;">
 
 
-
-        {% load static %}
-        <img class="image" style="margin-bottom: 20px;" src="{% static 'portfolio/images/graf.PNG' %}">
+        {% load cloudinary_static %}
+        {% cloudinary_static 'images/dummy-static-image.jpg' width=50 height=50 %}
 
 
         <h2>{{request.user}}</h2>

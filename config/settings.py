@@ -12,7 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 
+import os
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from distlib import manifest
 from django.conf.global_settings import ADMINS
 
 # config/settings.py
@@ -46,7 +49,16 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',  # novo
     'django.contrib.staticfiles',
     'portfolio',
+    'cloudinary_storage',
+    'cloudinary',
 ]
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'heilig-meyers',
+    'API_KEY': '359571141668918',
+    'API_SECRET': 'scYVxoRJ1ZHvzbSyBfOmmabMNC8',
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -134,5 +146,8 @@ STATICFILES_DIRS = [str(BASE_DIR.joinpath('portfolio/static'))]
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))  # novo
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

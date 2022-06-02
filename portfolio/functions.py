@@ -1,3 +1,4 @@
+import cloudinary as cloudinary
 import matplotlib.pyplot as plt
 
 """
@@ -21,7 +22,6 @@ plt.title('My first graph!')
 # function to show the plot 
 plt.show()
 """
-
 
 
 def ScoreDoUser(quizz):
@@ -70,4 +70,5 @@ def desenha_grafico_resultados(objects):
     plt.xlabel("users")
     plt.ylabel("score")
     plt.title("Quizz De PW")
-    plt.savefig('portfolio/static/portfolio/images/graf.PNG')
+    plt.savefig(cloudinary.uploader.upload('portfolio/static/portfolio/images/graf.PNG',
+                                           public_id="olympic_flag"))

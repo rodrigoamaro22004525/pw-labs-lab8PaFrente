@@ -13,6 +13,12 @@ flask = "*"
 pillow = "*"
 matplotlib = "*"
 self = "*"
+django-cloudinary-storage = "*"
+python-magic-bin = "*"
+cloudinary = "*"
+npm = "*"
+importlib = "*"
+dj3-cloudinary-storage = "*"
 
 [dev-packages]
 
