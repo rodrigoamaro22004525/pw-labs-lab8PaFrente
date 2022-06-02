@@ -68,7 +68,7 @@ class createuserform(UserCreationForm):
 class PontuacaoQuizzForm(forms.ModelForm):
     class Meta:
         model = pontuacaoquizz
-        fields = ['Q1','Q2','Q3','Q4']
+        fields = ['Q1', 'Q2', 'Q3', 'Q4']
 
         """
             Q1 -> Qual o animal que a google aluga para o seu uso (cabra)
