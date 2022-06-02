@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+  <object model="portfolio.post" pk="1">
+    <field name="title" type="CharField">YO WAddup</field>
+    <field name="slug" type="SlugField">HUNTS_HUNTS</field>
+    <field name="author" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="body" type="TextField">A POST FROM THE ADMIN /EDIT/</field>
+    <field name="date_added" type="DateTimeField">2022-05-25T08:29:40.873717+00:00</field>
+  </object>
+  <object model="portfolio.post" pk="2">
+    <field name="title" type="CharField">I bet on luna</field>
+    <field name="slug" type="SlugField">Crypto_Scam</field>
+    <field name="author" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="body" type="TextField">LET'S GOOOO</field>
+    <field name="date_added" type="DateTimeField">2022-05-25T09:23:33.559825+00:00</field>
+  </object>
+  <object model="portfolio.comment" pk="2">
+    <field name="post" rel="ManyToOneRel" to="portfolio.post">1</field>
+    <field name="name" type="CharField">yooyoy</field>
+    <field name="email" type="CharField">fsdves@gmail.com</field>
+    <field name="body" type="TextField">fdhmgobimxdlvçc</field>
+    <field name="date_added" type="DateTimeField">2022-05-25T08:53:25.365161+00:00</field>
+  </object>
+  <object model="portfolio.comment" pk="3">
+    <field name="post" rel="ManyToOneRel" to="portfolio.post">1</field>
+    <field name="name" type="CharField">yooyoy</field>
+    <field name="email" type="CharField">fsdves@gmail.com</field>
+    <field name="body" type="TextField">b nhvbmhbj</field>
+    <field name="date_added" type="DateTimeField">2022-05-25T08:53:34.492318+00:00</field>
+  </object>
+  <object model="portfolio.comment" pk="4">
+    <field name="post" rel="ManyToOneRel" to="portfolio.post">1</field>
+    <field name="name" type="CharField">yooyoy</field>
+    <field name="email" type="CharField">fsdves@gmail.com</field>
+    <field name="body" type="TextField">nbjmhumhu</field>
+    <field name="date_added" type="DateTimeField">2022-05-25T08:54:31.270899+00:00</field>
+  </object>
+  <object model="portfolio.comment" pk="5">
+    <field name="post" rel="ManyToOneRel" to="portfolio.post">1</field>
+    <field name="name" type="CharField">yooyoy</field>
+    <field name="email" type="CharField">fsdves@gmail.com</field>
+    <field name="body" type="TextField">nbjmhumhu</field>
+    <field name="date_added" type="DateTimeField">2022-05-25T08:54:50.030430+00:00</field>
+  </object>
+  <object model="portfolio.comment" pk="6">
+    <field name="post" rel="ManyToOneRel" to="portfolio.post">1</field>
+    <field name="name" type="CharField">yooyoy</field>
+    <field name="email" type="CharField">REFAS@fmdajmcd.com</field>
+    <field name="body" type="TextField">njkhjhuuiiu,ui</field>
+    <field name="date_added" type="DateTimeField">2022-05-25T08:54:55.556022+00:00</field>
+  </object>
+  <object model="portfolio.comment" pk="7">
+    <field name="post" rel="ManyToOneRel" to="portfolio.post">1</field>
+    <field name="name" type="CharField">yooyoy</field>
+    <field name="email" type="CharField">fsdves@gmail.com</field>
+    <field name="body" type="TextField">jnkm</field>
+    <field name="date_added" type="DateTimeField">2022-05-25T08:55:38.081412+00:00</field>
+  </object>
+  <object model="portfolio.comment" pk="8">
+    <field name="post" rel="ManyToOneRel" to="portfolio.post">2</field>
+    <field name="name" type="CharField">gragr</field>
+    <field name="email" type="CharField">REFAS@fmdajmcd.com</field>
+    <field name="body" type="TextField">LETS GOOO UP ON LUNA</field>
+    <field name="date_added" type="DateTimeField">2022-05-25T09:24:02.265694+00:00</field>
+  </object>
+  <object model="portfolio.comment" pk="9">
+    <field name="post" rel="ManyToOneRel" to="portfolio.post">2</field>
+    <field name="name" type="CharField">yooyoy</field>
+    <field name="email" type="CharField">REFAS@fmdajmcd.com</field>
+    <field name="body" type="TextField">PFEALPV*LDACSPCAPSCAPs+</field>
+    <field name="date_added" type="DateTimeField">2022-05-25T09:41:17.431011+00:00</field>
+  </object>
+  <object model="portfolio.comment" pk="10">
+    <field name="post" rel="ManyToOneRel" to="portfolio.post">2</field>
+    <field name="name" type="CharField">gragr</field>
+    <field name="email" type="CharField">fsdves@gmail.comhumio</field>
+    <field name="body" type="TextField">iuhiujil,ol</field>
+    <field name="date_added" type="DateTimeField">2022-05-25T09:41:41.064410+00:00</field>
+  </object>
+  <object model="portfolio.comment" pk="11">
+    <field name="post" rel="ManyToOneRel" to="portfolio.post">2</field>
+    <field name="name" type="CharField">hrt</field>
+    <field name="email" type="CharField">fh@alfcsa.com</field>
+    <field name="body" type="TextField">FGAwefaw</field>
+    <field name="date_added" type="DateTimeField">2022-05-25T17:51:31.612360+00:00</field>
+  </object>
+  <object model="portfolio.comment" pk="12">
+    <field name="post" rel="ManyToOneRel" to="portfolio.post">2</field>
+    <field name="name" type="CharField">sda</field>
+    <field name="email" type="CharField">dsa@fds.com</field>
+    <field name="body" type="TextField">vcsdsdc</field>
+    <field name="date_added" type="DateTimeField">2022-05-28T17:52:59.161253+00:00</field>
+  </object>
+  <object model="portfolio.comment" pk="13">
+    <field name="post" rel="ManyToOneRel" to="portfolio.post">2</field>
+    <field name="name" type="CharField">2dfs</field>
+    <field name="email" type="CharField">rod@gmail.com</field>
+    <field name="body" type="TextField">vdsvsdvcds</field>
+    <field name="date_added" type="DateTimeField">2022-05-28T18:28:17.891222+00:00</field>
+  </object>
+  <object model="portfolio.comment" pk="14">
+    <field name="post" rel="ManyToOneRel" to="portfolio.post">2</field>
+    <field name="name" type="CharField">yoyo</field>
+    <field name="email" type="CharField">yoyo@gmail.com</field>
+    <field name="body" type="TextField">gfsdvsdvsd</field>
+    <field name="date_added" type="DateTimeField">2022-05-28T18:36:16.511572+00:00</field>
+  </object>
+  <object model="portfolio.comment" pk="15">
+    <field name="post" rel="ManyToOneRel" to="portfolio.post">2</field>
+    <field name="name" type="CharField">login not working</field>
+    <field name="email" type="CharField">yo@fme.com</field>
+    <field name="body" type="TextField">vsdvdscvsx</field>
+    <field name="date_added" type="DateTimeField">2022-05-28T18:51:51.793855+00:00</field>
+  </object>
+  <object model="portfolio.comment" pk="16">
+    <field name="post" rel="ManyToOneRel" to="portfolio.post">1</field>
+    <field name="name" type="CharField">yooyoy</field>
+    <field name="email" type="CharField">yooyoy@gm.com</field>
+    <field name="body" type="TextField">yooyoy yooyoy yooyoy yooyoy</field>
+    <field name="date_added" type="DateTimeField">2022-05-29T00:32:50.150037+00:00</field>
+  </object>
+  <object model="portfolio.comment" pk="17">
+    <field name="post" rel="ManyToOneRel" to="portfolio.post">1</field>
+    <field name="name" type="CharField">yooyo</field>
+    <field name="email" type="CharField">yooyo@pig.com</field>
+    <field name="body" type="TextField">yooyoyooyo</field>
+    <field name="date_added" type="DateTimeField">2022-05-29T01:17:39.990262+00:00</field>
+  </object>
+  <object model="portfolio.comment" pk="18">
+    <field name="post" rel="ManyToOneRel" to="portfolio.post">2</field>
+    <field name="name" type="CharField">csa</field>
+    <field name="email" type="CharField">csa@gma.com</field>
+    <field name="body" type="TextField">csacsacsa</field>
+    <field name="date_added" type="DateTimeField">2022-05-29T02:07:27.285520+00:00</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="1">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">Q1</field>
+    <field name="Q2" type="CharField">Q2</field>
+    <field name="Q3" type="CharField">Q3</field>
+    <field name="Q4" type="CharField">Q4</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="16">
+    <field name="name" type="CharField">manel</field>
+    <field name="Q1" type="CharField">cabra</field>
+    <field name="Q2" type="CharField">1868</field>
+    <field name="Q3" type="CharField">madeira</field>
+    <field name="Q4" type="CharField">I’m 01100110 01100101 01100101 01101100 01101001 01101110 01100111 00100000 01101100 01110101 01100011 01101011 01111001 00001010</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="24">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">cabra</field>
+    <field name="Q2" type="CharField">1868</field>
+    <field name="Q3" type="CharField">madeira</field>
+    <field name="Q4" type="CharField">fdsa</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="25">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">cabra</field>
+    <field name="Q2" type="CharField">1868</field>
+    <field name="Q3" type="CharField">madeira</field>
+    <field name="Q4" type="CharField">fdsa</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="26">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">cabra</field>
+    <field name="Q2" type="CharField">1868</field>
+    <field name="Q3" type="CharField">madeira</field>
+    <field name="Q4" type="CharField">fdsa</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="27">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">cabra</field>
+    <field name="Q2" type="CharField">1868</field>
+    <field name="Q3" type="CharField">madeira</field>
+    <field name="Q4" type="CharField">fdsa</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="28">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">cabra</field>
+    <field name="Q2" type="CharField">1868</field>
+    <field name="Q3" type="CharField">madeira</field>
+    <field name="Q4" type="CharField">fcdea</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="29">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">cabra</field>
+    <field name="Q2" type="CharField">1868</field>
+    <field name="Q3" type="CharField">madeira</field>
+    <field name="Q4" type="CharField">fcdea</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="30">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">cabra</field>
+    <field name="Q2" type="CharField">1868</field>
+    <field name="Q3" type="CharField">madeira</field>
+    <field name="Q4" type="CharField">fcdea</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="31">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">fase</field>
+    <field name="Q2" type="CharField">asf</field>
+    <field name="Q3" type="CharField">asf</field>
+    <field name="Q4" type="CharField">fsa</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="32">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">fase</field>
+    <field name="Q2" type="CharField">asf</field>
+    <field name="Q3" type="CharField">asf</field>
+    <field name="Q4" type="CharField">fsa</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="33">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">fase</field>
+    <field name="Q2" type="CharField">asf</field>
+    <field name="Q3" type="CharField">asf</field>
+    <field name="Q4" type="CharField">fsa</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="34">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">fase</field>
+    <field name="Q2" type="CharField">asf</field>
+    <field name="Q3" type="CharField">asf</field>
+    <field name="Q4" type="CharField">fsa</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="35">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">fase</field>
+    <field name="Q2" type="CharField">asf</field>
+    <field name="Q3" type="CharField">asf</field>
+    <field name="Q4" type="CharField">fsa</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="36">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">fase</field>
+    <field name="Q2" type="CharField">asf</field>
+    <field name="Q3" type="CharField">asf</field>
+    <field name="Q4" type="CharField">fsa</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="37">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">fase</field>
+    <field name="Q2" type="CharField">asf</field>
+    <field name="Q3" type="CharField">asf</field>
+    <field name="Q4" type="CharField">fsa</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="38">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">fase</field>
+    <field name="Q2" type="CharField">asf</field>
+    <field name="Q3" type="CharField">asf</field>
+    <field name="Q4" type="CharField">fsa</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="39">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">fase</field>
+    <field name="Q2" type="CharField">asf</field>
+    <field name="Q3" type="CharField">asf</field>
+    <field name="Q4" type="CharField">fsa</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="40">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">fase</field>
+    <field name="Q2" type="CharField">asf</field>
+    <field name="Q3" type="CharField">asf</field>
+    <field name="Q4" type="CharField">fsa</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="41">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">cabra</field>
+    <field name="Q2" type="CharField">1868</field>
+    <field name="Q3" type="CharField">madeira</field>
+    <field name="Q4" type="CharField">gfds</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="42">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">gfd</field>
+    <field name="Q2" type="CharField">dfg</field>
+    <field name="Q3" type="CharField">gfd</field>
+    <field name="Q4" type="CharField">dfg</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="43">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">gfd</field>
+    <field name="Q2" type="CharField">dfg</field>
+    <field name="Q3" type="CharField">gfd</field>
+    <field name="Q4" type="CharField">dfg</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="44">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">cabra</field>
+    <field name="Q2" type="CharField">1868</field>
+    <field name="Q3" type="CharField">madeira</field>
+    <field name="Q4" type="CharField">fdsfdsf</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="45">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">cabra</field>
+    <field name="Q2" type="CharField">1868</field>
+    <field name="Q3" type="CharField">madeira</field>
+    <field name="Q4" type="CharField">fdsfdsf</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="46">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">cabra</field>
+    <field name="Q2" type="CharField">1868</field>
+    <field name="Q3" type="CharField">madeira</field>
+    <field name="Q4" type="CharField">fdsfdsf</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="47">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">cabra</field>
+    <field name="Q2" type="CharField">1868</field>
+    <field name="Q3" type="CharField">madeira</field>
+    <field name="Q4" type="CharField">fdsfdsf</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="48">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">cabra</field>
+    <field name="Q2" type="CharField">1868</field>
+    <field name="Q3" type="CharField">madeira</field>
+    <field name="Q4" type="CharField">fdsfdsf</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="49">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">dsc</field>
+    <field name="Q2" type="CharField">dsv</field>
+    <field name="Q3" type="CharField">szdv</field>
+    <field name="Q4" type="CharField">zv</field>
+  </object>
+  <object model="portfolio.pontuacaoquizz" pk="50">
+    <field name="name" type="CharField">admin</field>
+    <field name="Q1" type="CharField">fgds</field>
+    <field name="Q2" type="CharField">dfs</field>
+    <field name="Q3" type="CharField">fsd</field>
+    <field name="Q4" type="CharField">sdfsdf</field>
+  </object>
+  <object model="portfolio.media" pk="1">
+    <field name="name" type="CharField">Quizz</field>
+    <field name="image" type="FileField">media/Quizz/graf_iqukq7</field>
+  </object>
+  <object model="portfolio.media" pk="2">
+    <field name="name" type="CharField">cda</field>
+    <field name="image" type="FileField">media/Quizz/BD_ujqz1w</field>
+  </object>
+</django-objects>
