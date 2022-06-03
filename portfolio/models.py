@@ -39,14 +39,14 @@ class Projetos(models.Model):
 
 
 class pontuacaoquizz(models.Model):
-    name = models.CharField(None, max_length=200)
+    name = models.CharField(max_length=50)
 
     Q1 = models.CharField(null=True, max_length=200)
     Q2 = models.CharField(null=True, max_length=200)
     Q3 = models.CharField(null=True, max_length=200)
     Q4 = models.CharField(null=True, max_length=200)
 
-
+    user = models.ForeignKey(User, models.SET_NULL, blank=True, null=True, )
 
     """
         Q1 -> Qual o animal que a google aluga para o seu uso (cabra)
@@ -59,4 +59,3 @@ class pontuacaoquizz(models.Model):
 class media(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='Quizz/', blank=True)
-
