@@ -1,5 +1,7 @@
 import cloudinary as cloudinary
 import matplotlib.pyplot as plt
+from .models import pontuacaoquizz
+
 
 """
 https://www.geeksforgeeks.org/simple-plot-in-python-using-matplotlib/
@@ -54,7 +56,6 @@ def dadosDoQuiz(objects):
     for quizz in objects:
         data[quizz.name] = ScoreDoUser(quizz)
         print(quizz.name)
-
     return data
 
 

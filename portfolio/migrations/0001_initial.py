@@ -13,6 +13,8 @@ class Migration(migrations.Migration):
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
+
+
     operations = [
         migrations.CreateModel(
             name='media',
@@ -31,7 +33,7 @@ class Migration(migrations.Migration):
                 ('Q2', models.CharField(max_length=200, null=True)),
                 ('Q3', models.CharField(max_length=200, null=True)),
                 ('Q4', models.CharField(max_length=200, null=True)),
-            ],
+            ]
         ),
         migrations.CreateModel(
             name='Portfolio',
@@ -77,4 +79,19 @@ class Migration(migrations.Migration):
                 'ordering': ['date_added'],
             },
         ),
+
+
     ]
+
+    class Migration(migrations.Migration):
+        dependencies = [
+            ('portfolio', '0001_initial'),
+        ]
+
+        operations = [
+            migrations.AlterField(
+                model_name='pontuacaoquizz',
+                name='name',
+                field=models.CharField(default='objects', max_length=50),
+            ),
+        ]

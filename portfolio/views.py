@@ -136,6 +136,7 @@ def quizz_page_view(request):
                 opc.id = user.id
                 opc.save()
                 desenha_grafico_resultados(pontuacaoquizz.objects.all())
+                form.save()
                 return HttpResponseRedirect(request.path_info)
 
         else:
