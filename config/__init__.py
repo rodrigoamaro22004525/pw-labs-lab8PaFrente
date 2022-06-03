@@ -1,1 +1,0 @@
-C:\Users\User\PycharmProjects\pw-labs-lab8\config

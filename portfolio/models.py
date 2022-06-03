@@ -46,11 +46,10 @@ class pontuacaoquizz(models.Model):
     Q3 = models.CharField(null=True, max_length=200)
     Q4 = models.CharField(null=True, max_length=200)
 
-    def __str__(self):
-        return self.name
+
 
     """
-        Q1 -> Qual o animal que a google aluga para o seu uso (madeira)
+        Q1 -> Qual o animal que a google aluga para o seu uso (cabra)
         Q2 -> Quando foi inventado o Keyboard do estilo QWERTY (1868)
         Q3 -> De que material foi feito o primeiro rato (madeira)
         Q4 -> Qual foi o primeiro tweet da google? (I’m 01100110 01100101 01100101 01101100 01101001 01101110 01100111 00100000 01101100 01110101 01100011 01101011 01111001 00001010)
