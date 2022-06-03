@@ -133,215 +133,29 @@
     <field name="body" type="TextField">csacsacsa</field>
     <field name="date_added" type="DateTimeField">2022-05-29T02:07:27.285520+00:00</field>
   </object>
-  <object model="portfolio.pontuacaoquizz" pk="1">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">Q1</field>
-    <field name="Q2" type="CharField">Q2</field>
-    <field name="Q3" type="CharField">Q3</field>
-    <field name="Q4" type="CharField">Q4</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="16">
-    <field name="name" type="CharField">manel</field>
+  <object model="portfolio.pontuacaoquizz" pk="6">
+    <field name="name" type="CharField">register</field>
     <field name="Q1" type="CharField">cabra</field>
     <field name="Q2" type="CharField">1868</field>
     <field name="Q3" type="CharField">madeira</field>
-    <field name="Q4" type="CharField">I’m 01100110 01100101 01100101 01101100 01101001 01101110 01100111 00100000 01101100 01110101 01100011 01101011 01111001 00001010</field>
+    <field name="Q4" type="CharField">gdfs</field>
   </object>
-  <object model="portfolio.pontuacaoquizz" pk="24">
-    <field name="name" type="CharField">admin</field>
+  <object model="portfolio.pontuacaoquizz" pk="7">
+    <field name="name" type="CharField">8000</field>
     <field name="Q1" type="CharField">cabra</field>
     <field name="Q2" type="CharField">1868</field>
     <field name="Q3" type="CharField">madeira</field>
-    <field name="Q4" type="CharField">fdsa</field>
+    <field name="Q4" type="CharField">fdsfsd</field>
   </object>
-  <object model="portfolio.pontuacaoquizz" pk="25">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">cabra</field>
+  <object model="portfolio.pontuacaoquizz" pk="8">
+    <field name="name" type="CharField">madeira</field>
+    <field name="Q1" type="CharField">madeira</field>
     <field name="Q2" type="CharField">1868</field>
-    <field name="Q3" type="CharField">madeira</field>
-    <field name="Q4" type="CharField">fdsa</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="26">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">cabra</field>
-    <field name="Q2" type="CharField">1868</field>
-    <field name="Q3" type="CharField">madeira</field>
-    <field name="Q4" type="CharField">fdsa</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="27">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">cabra</field>
-    <field name="Q2" type="CharField">1868</field>
-    <field name="Q3" type="CharField">madeira</field>
-    <field name="Q4" type="CharField">fdsa</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="28">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">cabra</field>
-    <field name="Q2" type="CharField">1868</field>
-    <field name="Q3" type="CharField">madeira</field>
-    <field name="Q4" type="CharField">fcdea</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="29">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">cabra</field>
-    <field name="Q2" type="CharField">1868</field>
-    <field name="Q3" type="CharField">madeira</field>
-    <field name="Q4" type="CharField">fcdea</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="30">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">cabra</field>
-    <field name="Q2" type="CharField">1868</field>
-    <field name="Q3" type="CharField">madeira</field>
-    <field name="Q4" type="CharField">fcdea</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="31">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">fase</field>
-    <field name="Q2" type="CharField">asf</field>
-    <field name="Q3" type="CharField">asf</field>
-    <field name="Q4" type="CharField">fsa</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="32">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">fase</field>
-    <field name="Q2" type="CharField">asf</field>
-    <field name="Q3" type="CharField">asf</field>
-    <field name="Q4" type="CharField">fsa</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="33">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">fase</field>
-    <field name="Q2" type="CharField">asf</field>
-    <field name="Q3" type="CharField">asf</field>
-    <field name="Q4" type="CharField">fsa</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="34">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">fase</field>
-    <field name="Q2" type="CharField">asf</field>
-    <field name="Q3" type="CharField">asf</field>
-    <field name="Q4" type="CharField">fsa</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="35">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">fase</field>
-    <field name="Q2" type="CharField">asf</field>
-    <field name="Q3" type="CharField">asf</field>
-    <field name="Q4" type="CharField">fsa</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="36">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">fase</field>
-    <field name="Q2" type="CharField">asf</field>
-    <field name="Q3" type="CharField">asf</field>
-    <field name="Q4" type="CharField">fsa</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="37">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">fase</field>
-    <field name="Q2" type="CharField">asf</field>
-    <field name="Q3" type="CharField">asf</field>
-    <field name="Q4" type="CharField">fsa</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="38">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">fase</field>
-    <field name="Q2" type="CharField">asf</field>
-    <field name="Q3" type="CharField">asf</field>
-    <field name="Q4" type="CharField">fsa</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="39">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">fase</field>
-    <field name="Q2" type="CharField">asf</field>
-    <field name="Q3" type="CharField">asf</field>
-    <field name="Q4" type="CharField">fsa</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="40">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">fase</field>
-    <field name="Q2" type="CharField">asf</field>
-    <field name="Q3" type="CharField">asf</field>
-    <field name="Q4" type="CharField">fsa</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="41">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">cabra</field>
-    <field name="Q2" type="CharField">1868</field>
-    <field name="Q3" type="CharField">madeira</field>
-    <field name="Q4" type="CharField">gfds</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="42">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">gfd</field>
-    <field name="Q2" type="CharField">dfg</field>
-    <field name="Q3" type="CharField">gfd</field>
-    <field name="Q4" type="CharField">dfg</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="43">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">gfd</field>
-    <field name="Q2" type="CharField">dfg</field>
-    <field name="Q3" type="CharField">gfd</field>
-    <field name="Q4" type="CharField">dfg</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="44">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">cabra</field>
-    <field name="Q2" type="CharField">1868</field>
-    <field name="Q3" type="CharField">madeira</field>
-    <field name="Q4" type="CharField">fdsfdsf</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="45">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">cabra</field>
-    <field name="Q2" type="CharField">1868</field>
-    <field name="Q3" type="CharField">madeira</field>
-    <field name="Q4" type="CharField">fdsfdsf</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="46">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">cabra</field>
-    <field name="Q2" type="CharField">1868</field>
-    <field name="Q3" type="CharField">madeira</field>
-    <field name="Q4" type="CharField">fdsfdsf</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="47">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">cabra</field>
-    <field name="Q2" type="CharField">1868</field>
-    <field name="Q3" type="CharField">madeira</field>
-    <field name="Q4" type="CharField">fdsfdsf</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="48">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">cabra</field>
-    <field name="Q2" type="CharField">1868</field>
-    <field name="Q3" type="CharField">madeira</field>
-    <field name="Q4" type="CharField">fdsfdsf</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="49">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">dsc</field>
-    <field name="Q2" type="CharField">dsv</field>
-    <field name="Q3" type="CharField">szdv</field>
-    <field name="Q4" type="CharField">zv</field>
-  </object>
-  <object model="portfolio.pontuacaoquizz" pk="50">
-    <field name="name" type="CharField">admin</field>
-    <field name="Q1" type="CharField">fgds</field>
-    <field name="Q2" type="CharField">dfs</field>
-    <field name="Q3" type="CharField">fsd</field>
-    <field name="Q4" type="CharField">sdfsdf</field>
+    <field name="Q3" type="CharField">fds</field>
+    <field name="Q4" type="CharField">fds</field>
   </object>
   <object model="portfolio.media" pk="1">
     <field name="name" type="CharField">Quizz</field>
     <field name="image" type="FileField">media/Quizz/graf_iqukq7</field>
-  </object>
-  <object model="portfolio.media" pk="2">
-    <field name="name" type="CharField">cda</field>
-    <field name="image" type="FileField">media/Quizz/BD_ujqz1w</field>
   </object>
 </django-objects>

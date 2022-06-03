@@ -70,4 +70,4 @@ def desenha_grafico_resultados(objects):
     plt.xlabel("users")
     plt.ylabel("score")
     plt.title("Quizz De PW")
-    plt.savefig('portfolio/static/portfolio/images/grapf.PNG')
+    plt.savefig('portfolio/static/portfolio/images/graf.PNG')

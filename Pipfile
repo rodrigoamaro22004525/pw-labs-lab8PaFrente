@@ -4,13 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "*"
+django = "==4.0.4"
 matplotlib = "*"
 environs = {version = "==8.0.0", extras = ["django"]}
 psycopg2-binary = "*"
 whitenoise = "==5.1.0"
 gunicorn = "==19.9.0"
 django-cloudinary-storage = "*"
+self = "*"
 
 [dev-packages]
 
