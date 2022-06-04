@@ -12,6 +12,7 @@ whitenoise = "==5.1.0"
 gunicorn = "==19.9.0"
 django-cloudinary-storage = "*"
 self = "*"
+django-user-accounts = "*"
 
 [dev-packages]
 

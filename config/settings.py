@@ -15,6 +15,7 @@ from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from cloudinary.provisioning import account, users
 from distlib import manifest
 from django.conf.global_settings import ADMINS
 
@@ -22,13 +23,10 @@ from django.conf.global_settings import ADMINS
 from django.contrib.admindocs import middleware
 from environs import Env
 
-
-
 env = Env()
 env.read_env()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 DEBUG = env.bool("DEBUG", default=False)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -38,7 +36,6 @@ DEBUG = env.bool("DEBUG", default=False)
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env.str("SECRET_KEY")
-
 
 ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
 
@@ -62,7 +59,6 @@ CLOUDINARY_STORAGE = {
     'API_KEY': '359571141668918',
     'API_SECRET': 'scYVxoRJ1ZHvzbSyBfOmmabMNC8',
 }
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -153,5 +149,3 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-
