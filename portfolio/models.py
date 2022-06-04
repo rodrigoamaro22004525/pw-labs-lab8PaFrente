@@ -46,8 +46,6 @@ class pontuacaoquizz(models.Model):
     Q3 = models.CharField(null=True, max_length=200)
     Q4 = models.CharField(null=True, max_length=200)
 
-    user = models.ForeignKey(User, models.SET_NULL, blank=True, null=True, )
-
     """
         Q1 -> Qual o animal que a google aluga para o seu uso (cabra)
         Q2 -> Quando foi inventado o Keyboard do estilo QWERTY (1868)
