@@ -37,7 +37,7 @@ DEBUG = env.bool("DEBUG", default=False)
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env.str("SECRET_KEY")
 
-ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1','portfolio-buildblock.herokuapp.com']
 
 # Application definition
 
@@ -142,10 +142,12 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS = [str(BASE_DIR.joinpath('portfolio/static'))]
-STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))  # novo
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'portfolio/static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+django_on_heroku.settings(locals())

@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path
 from . import views
 
@@ -37,8 +38,10 @@ urlpatterns = [
                   path('logout/', views.logoutPage, name='logout'),
                   path('register/', views.registerPage, name='register'),
                   path('quizz/', views.quizz_page_view, name='quizz'),
-              ] \
-              + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += staticfiles_urlpatterns()
+
 # não tendo este static em cima fez com que eu não pudesse fazer nada e tive que refazer o código todo
 
 #para imagens

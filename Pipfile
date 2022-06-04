@@ -13,6 +13,7 @@ gunicorn = "==19.9.0"
 django-cloudinary-storage = "*"
 self = "*"
 django-user-accounts = "*"
+django-on-heroku = "*"
 
 [dev-packages]
 
