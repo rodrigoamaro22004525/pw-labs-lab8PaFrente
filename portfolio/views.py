@@ -132,7 +132,6 @@ def quizz_page_view(request):
         if request.method == 'POST':
             if form.is_valid():
                 form = form.save(commit=False)
-                form.name = user.username
                 form.save()
                 desenha_grafico_resultados(pontuacaoquizz.objects.all())
                 return HttpResponseRedirect(request.path_info)
