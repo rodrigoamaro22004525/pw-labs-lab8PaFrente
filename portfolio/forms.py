@@ -77,7 +77,6 @@ class PontuacaoQuizzForm(forms.ModelForm):
         """
 
         widgets = {
-            'name': forms.TextInput(attrs={'visibility': 'none'}),
             'Q1': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Q1'}),
             'Q2': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Q2'}),
             'Q3': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Q3'}),

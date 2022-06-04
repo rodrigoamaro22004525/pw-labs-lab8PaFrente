@@ -39,7 +39,6 @@ class Projetos(models.Model):
 
 
 class pontuacaoquizz(models.Model):
-    name = models.CharField(max_length=50)
 
     Q1 = models.CharField(null=True, max_length=200)
     Q2 = models.CharField(null=True, max_length=200)
