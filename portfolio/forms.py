@@ -67,7 +67,7 @@ class createuserform(UserCreationForm):
 class PontuacaoQuizzForm(forms.ModelForm):
     class Meta:
         model = pontuacaoquizz
-        fields = ['Q1', 'Q2', 'Q3', 'Q4']
+        fields = ['name','Q1', 'Q2', 'Q3', 'Q4']
 
         """
             Q1 -> Qual o animal que a google aluga para o seu uso (cabra)
@@ -77,7 +77,7 @@ class PontuacaoQuizzForm(forms.ModelForm):
         """
 
         widgets = {
-            'name': forms.TextInput(attrs={'visibility': 'none'}),
+            'name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'SO FUNCIONA EM LOCALHOST!!!!!!!'}),
             'Q1': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Q1'}),
             'Q2': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Q2'}),
             'Q3': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Q3'}),
