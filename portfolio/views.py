@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib.auth import login, logout, authenticate
 from django.conf import settings
+from django.contrib.auth.forms import UserCreationForm
 
 from .forms import *
 from .models import *
@@ -92,7 +93,7 @@ def registerPage(request):
             form = createuserform(request.POST)
             if form.is_valid():
                 user = form.save()
-                return redirect('portfolio:login')
+                return redirect('portfolio:login', user)
         context = {
             'form': form,
         }

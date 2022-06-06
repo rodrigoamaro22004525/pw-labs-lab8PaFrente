@@ -26,6 +26,7 @@
         <form method="POST" class="loginfrm" action="." style="display: block;height: 700px;       border-radius: 10px;        margin: 20px;        background-color: #aba6a6;        border-bottom-color: #b22121;        border-bottom-style: double;      box-shadow: rgba(129, 29, 29, 0.8) 5px 5px, rgb(77, 19, 19) 10px 10px;padding-top: 250px;">
 
             <div style="padding-left: 22%">
+
                 {% csrf_token %}
                 {{form.as_p}}
 
