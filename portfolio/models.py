@@ -39,7 +39,7 @@ class Projetos(models.Model):
 
 
 class pontuacaoquizz(models.Model):
-    name = models.CharField(unique=True, null=True, max_length=50)
+    name = models.CharField(User, max_length=50, blank=True)
 
     Q1 = models.CharField(null=True, max_length=200)
     Q2 = models.CharField(null=True, max_length=200)
@@ -55,7 +55,6 @@ class pontuacaoquizz(models.Model):
         Q3 -> De que material foi feito o primeiro rato (madeira)
         Q4 -> Qual foi o primeiro tweet da google? (I’m 01100110 01100101 01100101 01101100 01101001 01101110 01100111 00100000 01101100 01110101 01100011 01101011 01111001 00001010)
         """
-
 
 class media(models.Model):
     name = models.CharField(max_length=100)
