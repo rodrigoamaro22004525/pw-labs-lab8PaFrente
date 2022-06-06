@@ -1,17 +1,12 @@
+from django.contrib import messages
+from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
-from django.urls import reverse
-from django.contrib.auth import login, logout, authenticate
-from django.conf import settings
-from django.contrib.auth.forms import UserCreationForm
 
 from .forms import *
-from .models import *
-
 from .functions import desenha_grafico_resultados
-
-from django.contrib import messages
+from .models import *
 
 
 # Create your views here.
@@ -85,19 +80,28 @@ def programacao_page_view(request):
 
 
 def registerPage(request):
-    if request.user.is_authenticated:
-        return redirect('portfolio:home')
+    if request.method == 'POST':
+        form = createuserform(request.POST)
+        if form.is_valid():
+            user = form.save()
+            # refresh no valores do field
+            user.refresh_from_db()
+
+            # save no utilizador
+            user.save()
+
+            # palavra-passe dele para ser autenticado e levado po "home" automaticamente
+            raw_password = form.cleaned_data.get('password1')
+
+            # login depois de criar a conta
+            user = authenticate(username=user.username, password=raw_password)
+
+            login(request, user)
+
+            return redirect('portfolio:home')
     else:
         form = createuserform()
-        if request.method == 'POST':
-            form = createuserform(request.POST)
-            if form.is_valid():
-                user = form.save()
-                return redirect('portfolio:login', user)
-        context = {
-            'form': form,
-        }
-        return render(request, 'portfolio/register.html', context)
+    return render(request, 'portfolio/register.html', {'form': form})
 
 
 def login_page_view(request):

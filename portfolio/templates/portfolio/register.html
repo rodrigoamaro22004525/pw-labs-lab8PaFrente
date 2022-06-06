@@ -8,31 +8,31 @@
     label {
         color: black;
     }
-    .loginfrm {
-    color: black;
-    }
-
-
-    .containerLargeAF {
-        vertical-align: center;
-    }
 </style>
 
 {% load static %}
 
 {% block content %}
-    <h1 style="color: #ffffff"> Register </h1>
-    <div class="containerLargeAF">
-        <form method="POST" class="loginfrm" action="." style="display: block;height: 700px;       border-radius: 10px;        margin: 20px;        background-color: #aba6a6;        border-bottom-color: #b22121;        border-bottom-style: double;      box-shadow: rgba(129, 29, 29, 0.8) 5px 5px, rgb(77, 19, 19) 10px 10px;padding-top: 250px;">
-
-            <div style="padding-left: 22%">
-
-                {% csrf_token %}
-                {{form.as_p}}
-
-                <input class="btn btn-success" type="submit" value="Register Account">
-            </div>
-
+    <h1 style="color: #ffffff">Register </h1>
+    <div style="padding-left: 150px; padding-top: 50px ;display: block; background:#aba6a6 ;height: 500px;       border-radius: 10px;        margin: 20px;        border-bottom-color: #b22121;        border-bottom-style: double;      box-shadow: rgba(129, 29, 29, 0.8) 5px 5px, rgb(77, 19, 19) 10px 10px;">
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                <p>
+                    {{ field.label_tag }}<br>
+                    {{ field }}
+                    {% if field.help_text %}
+                        <small style="color: darkred">{{ field.help_text }}</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+            {% endfor %}
+            <button type="submit">Sign up</button>
         </form>
     </div>
+
+
+
+
 {% endblock %}

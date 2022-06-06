@@ -51,16 +51,18 @@ class ProjetosForm(forms.ModelForm):
 class createuserform(UserCreationForm):
     class Meta:
         model = User
-        fields = ['username', 'password']
+        fields = ('username', 'password1', 'password2', )
 
         widgets = {
             'username': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'username'}),
-            'password': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'password'}),
+            'password1': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'password'}),
+            'password2': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'password'}),
         }
 
         labels = {
             'username': 'Username',
-            'password': 'Password',
+            'password1': 'Password1',
+            'password2': 'Password2',
         }
 
 
