@@ -2,12 +2,15 @@
 
 
 {% load static %}
+<style>
 
+
+</style>
 
 {% block content %}
 
     <h1 style="color: white">Quizz section!</h1>
-    <div style="padding-left: 150px; padding-top: 50px ;display: block; background:#aba6a6 ;height: 900px;       border-radius: 10px;        margin: 20px;        border-bottom-color: #b22121;        border-bottom-style: double;      box-shadow: rgba(129, 29, 29, 0.8) 5px 5px, rgb(77, 19, 19) 10px 10px;">
+    <div style="padding-left: 150px; padding-top: 50px ;display: block; background:#aba6a6 ;height: 800px;       border-radius: 10px;        margin: 20px;        border-bottom-color: #b22121;        border-bottom-style: double;      box-shadow: rgba(129, 29, 29, 0.8) 5px 5px, rgb(77, 19, 19) 10px 10px;">
 
 
         <img src="../../static/portfolio/images/graf.PNG" alt="">
@@ -15,12 +18,12 @@
         <h2>{{request.user}}</h2>
 
 
-        <form method="post" action="." style="">
+        <form method="post" action="." class="tiraError">
             {% csrf_token %}
             {{ form.as_p }}
 
+            <button class="button is-success" style="left: 80%; bottom: 100px; ">Submeter</button>
 
-            <button class="button is-success" style="margin-top: 2%">Submeter</button>
 
         </form>
     </div>

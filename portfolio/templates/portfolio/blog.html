@@ -14,7 +14,8 @@
 {% block content %}
     <center><h1 style="color: white;">Blog</h1></center>
     {% for post in posts %}
-        <div style="">            <h2 id="veryUniqueClass">{{ post.title }}</h2>
+        <div style="display: block;justify-content: center;border-radius: 10px;margin: 20px;background-color: #ffffff;border-bottom-color: #b22121;border-bottom-style: double;box-shadow: rgba(129,29,29,0.8) 5px 5px, rgb(77,19,19) 10px 10px;padding: 15px;">            <h2>
+            {{ post.title }}</h2>
             <small>Posted at {{ post.date_added }}</small>
             <p>{{ post.intro }}</p>
 

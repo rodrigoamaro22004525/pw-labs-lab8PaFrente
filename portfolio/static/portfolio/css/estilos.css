@@ -1,5 +1,5 @@
 * {
-  
+
 }
 
 @-webkit-keyframes spinAround {
@@ -1843,5 +1843,6 @@ fieldset[disabled] .button {
 }
 
 .errorlist {
-    visibility: hidden;
+        display: none;
+        list-style: none;
 }
