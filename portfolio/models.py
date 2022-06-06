@@ -46,6 +46,9 @@ class pontuacaoquizz(models.Model):
     Q3 = models.CharField(null=True, max_length=200)
     Q4 = models.CharField(null=True, max_length=200)
 
+    def __str__(self):
+        return self.name
+
 
 
     """
