@@ -49,8 +49,6 @@ class pontuacaoquizz(models.Model):
     def __str__(self):
         return self.name
 
-
-
     """
         Q1 -> Qual o animal que a google aluga para o seu uso (cabra)
         Q2 -> Quando foi inventado o Keyboard do estilo QWERTY (1868)
