@@ -10753,16 +10753,6 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     padding: 3rem 1.5rem 6rem;
 }
 
-/*# sourceMappingURL=bulma.css.map */
-
-
-/*!
- *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
- */
-/* FONT PATH
- * -------------------------- */
-
 .fa {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -10772,7 +10762,6 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* makes the font 33% larger relative to the icon container */
 .fa-lg {
     font-size: 1.33333333em;
     line-height: 0.75em;
@@ -10965,8 +10954,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     color: #ffffff;
 }
 
-/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
-   readers do not read off random characters that represent icons */
+
 .fa-glass:before {
     content: "\f000";
 }

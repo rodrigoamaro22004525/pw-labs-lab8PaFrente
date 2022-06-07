@@ -34,7 +34,10 @@ def contacto_page_view(request):
 
 # Licenciatura
 def licenciatura_page_view(request):
-    return render(request, 'portfolio/licenciatura.html')
+    context = {
+        "cadeiras": licenciatura.objects.all(),
+    }
+    return render(request, 'portfolio/licenciatura.html', context)
 
 
 #  blog

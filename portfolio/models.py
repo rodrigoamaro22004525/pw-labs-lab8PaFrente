@@ -59,3 +59,16 @@ class pontuacaoquizz(models.Model):
 class media(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='Quizz/', blank=True)
+
+
+class licenciatura(models.Model):
+    nomeCadeira = models.CharField(max_length=50)
+    semestre = models.IntegerField(default=1)
+    etcs = models.IntegerField(default=0)
+    link_cadeira = models.URLField(blank=True)
+    rank = models.CharField(max_length=6)
+    ano = models.IntegerField(default=1)
+    """⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐"""
+
+    def __str__(self):
+        return self.nomeCadeira

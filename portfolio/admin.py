@@ -9,3 +9,5 @@ admin.site.register(Post)
 admin.site.register(Projetos)
 admin.site.register(pontuacaoquizz)
 admin.site.register(media)
+admin.site.register(licenciatura)
+

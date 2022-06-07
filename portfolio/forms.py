@@ -91,3 +91,23 @@ class PontuacaoQuizzForm(forms.ModelForm):
             'Q3': 'De que material foi feito o primeiro rato?',
             'Q4': 'Qual foi o primeiro tweet da google?',
         }
+
+
+class licenciaturaForm(forms.ModelForm):
+    class Meta:
+        model = licenciatura
+        fields = '__all__'
+
+        widgets = {
+            'nomeCadeira': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nome da Cadeira'}),
+            'semestre': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Semestre'}),
+            'etcs': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nr de ETC\'s'}),
+            'link_cadeira': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'URL da Cadeira'}),
+        }
+
+        labels = {
+            'nomeCadeira': 'NomeDaCadeira',
+            'semestre': 'Semestre',
+            'etcs':'Etcs',
+            'link_cadeira': 'LinkDaCadeira',
+        }
