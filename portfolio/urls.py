@@ -28,7 +28,6 @@ name = "home"
 urlpatterns = [
                   path('', views.home_page_view, name=''),
                   path('home/', views.home_page_view, name='home'),
-                  path('sobre/', views.sobre_page_view, name='sobre'),
                   path('contacto/', views.contacto_page_view, name='contacto'),
                   path('licenciatura/', views.licenciatura_page_view, name='licenciatura'),
                   path('blog/', views.blog_page_view, name='blog'),

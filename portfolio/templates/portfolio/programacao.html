@@ -4,33 +4,26 @@
 
 
 {% load static %}
-<link rel="stylesheet" href={% static 'portfolio/css/grid.css' %}>
+<link rel="stylesheet" href={% static 'portfolio/css/sobre.css' %}>
 
 {% block content %}
 
-    <h3 class="titulo" style="color: white">Projetos (Não funciona desisto)</h3>
+    <h3 class="titulo" style="color: white"></h3>
 
-
-    <div class="container2">
-        {% for projeto in projetos %}
-            <div>
-                <p style="color: white">
-                    Autor: {{ projeto.nome }}.
-                </p>
-                <p style="color: white">
-
-                    Linguagens: {{ projeto.linguagens }}
-                </p>
-
-                <img style="color: white" src="{{ projeto.imagem.url }}" alt="Projetos">
-
-            </div>
-
-
-
-
-        {% endfor %}
+<center>
+    <div class="row">
+        <div class="column">
+            {% for projeto in programacao %}
+                <div>
+                    <p style="color: white">Autor: {{ projeto.nome }}.</p>
+                    <p style="color: white">Linguagens: {{ projeto.linguagens }}</p>
+                    <img style="color: white" src="{{ projeto.imagem }}">
+                </div>
+            {% endfor %}
+        </div>
     </div>
+</center>
+
 
 {% endblock content %}
 

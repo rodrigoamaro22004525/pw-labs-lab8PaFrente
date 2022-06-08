@@ -22,11 +22,6 @@ def apresentacao_page_view(request):
     return render(request, 'portfolio/layout.html')
 
 
-# Sobre
-def sobre_page_view(request):
-    return render(request, 'portfolio/sobre.html')
-
-
 # Contacto
 def contacto_page_view(request):
     return render(request, 'portfolio/contacto.html')
