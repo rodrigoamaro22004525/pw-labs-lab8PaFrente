@@ -14,6 +14,9 @@ django-cloudinary-storage = "*"
 self = "*"
 django-user-accounts = "*"
 django-on-heroku = "*"
+markdown = "*"
+django-filter = "*"
+djangorestframework = "*"
 
 [dev-packages]
 

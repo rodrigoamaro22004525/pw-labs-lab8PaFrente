@@ -19,6 +19,9 @@ from cloudinary.provisioning import account, users
 from distlib import manifest
 from django.conf.global_settings import ADMINS
 
+from django.http import JsonResponse
+import json
+
 # config/settings.py
 from django.contrib.admindocs import middleware
 from environs import Env
@@ -52,6 +55,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'portfolio',
     'whitenoise.runserver_nostatic',
+    'rest_framework',
 ]
 
 CLOUDINARY_STORAGE = {
