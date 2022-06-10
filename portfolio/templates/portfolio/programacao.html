@@ -10,19 +10,19 @@
 
     <h3 class="titulo" style="color: white"></h3>
 
-<center>
-    <div class="row">
-        <div class="column">
-            {% for projeto in programacao %}
-                <div>
-                    <p style="color: white">Autor: {{ projeto.nome }}.</p>
-                    <p style="color: white">Linguagens: {{ projeto.linguagens }}</p>
-                    <img style="color: white" src="{{ projeto.imagem }}">
-                </div>
-            {% endfor %}
+    <center>
+        <div class="row">
+            <div class="column">
+                {% for projeto in programacao %}
+                    <div>
+                        <p style="color: white">Autor: {{ projeto.nome }}.</p>
+                        <p style="color: white">Linguagens: {{ projeto.linguagens }}</p>
+                        <img style="color: white" src="{{ projeto.imagem }}">
+                    </div>
+                {% endfor %}
+            </div>
         </div>
-    </div>
-</center>
+    </center>
 
 
 {% endblock content %}

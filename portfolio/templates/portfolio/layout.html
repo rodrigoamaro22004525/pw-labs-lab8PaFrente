@@ -16,6 +16,11 @@
   estavam corretos, logo fiz da minha maneira
  -->
 
+
+
+
+
+
 <head>
     <meta charset="UTF-16" name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio de Rodrigo Amaro</title>
@@ -28,18 +33,20 @@
 
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/dropdown.css' %}"/>
-    <style>label {
+    <style>
+        label {
         color: white
     }
-
     body, html {
         height: 100%;
         margin: 0;
     }
-
     p {
         color: white
     }</style>
+
+
+
 </head>
 <body class="bg" style="background: black">
 <nav class="navbar">
@@ -110,6 +117,8 @@
             {% if request.user.is_authenticated %}
                 <a class="navbar-item" style="left:180%" href={% url 'portfolio:quizz' %}><strong>quizz</strong></a>
             {% endif %}
+
+            <a class="navbar-item" style="left:180%" href={% url 'portfolio:api' %}><strong>API</strong></a>
 
         </div>
 

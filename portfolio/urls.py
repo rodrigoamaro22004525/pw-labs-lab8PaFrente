@@ -40,6 +40,7 @@ urlpatterns = [
                   path('logout/', views.logoutPage, name='logout'),
                   path('register/', views.registerPage, name='register'),
                   path('quizz/', views.quizz_page_view, name='quizz'),
+                  path('api/', views.api_page_view, name='api'),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()

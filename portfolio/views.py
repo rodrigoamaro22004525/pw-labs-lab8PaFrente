@@ -145,3 +145,7 @@ def quizz_page_view(request):
                 'form': form,
             }
             return render(request, 'portfolio/quizz.html', context)
+
+
+def api_page_view(request):
+    return render(request, 'portfolio/api.html')
