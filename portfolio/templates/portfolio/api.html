@@ -2,23 +2,43 @@
 
 {% block style %}
 
-{% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/PaJS/apis.js' %}">
 
 {% endblock style %}
 
 
 
-{% block content %}
 
+{% block content %}
     <h3 class="titulo" style="color: white">API de Avisos Meteorológicos até 3 dias</h3>
 
 
     <div style="display: block;justify-content: center;border-radius: 10px;margin: 20px;background-color: #ffffff;border-bottom-color: #b22121;border-bottom-style: double;box-shadow: rgba(129,29,29,0.8) 5px 5px, rgb(77,19,19) 10px 10px;padding: 15px;">
         <center>
             <div>
-                <button onclick="coinFlip()">Flip a coin, head or Tails</button>
-                <p id="coin"></p>
+                <script>
+                    function flipCoin() {
+                        const options = {
+                            method: 'GET',
+                            headers: {
+                                'X-RapidAPI-Key': '9ea2f2d1f9mshe369a6605b315d1p1759e4jsn91705e689ef2',
+                                'X-RapidAPI-Host': 'coin-flip1.p.rapidapi.com',
+                            }
+                        };
+
+                        fetch('https://coin-flip1.p.rapidapi.com/headstails', options)
+                            .then(response => response.json())
+                            .then(data => {
+                                document.getElementById('headOrTail').innerHTML = String(data.outcome);
+                            });
+                    }
+
+                </script>
+
+
+                <button onclick="flipCoin()">Flip a coin, head or Tails</button>
+
+                <p id="coin" style="color:black"></p>
+
             </div>
         </center>
     </div>
