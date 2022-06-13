@@ -4,19 +4,7 @@
 <html lang="" style="height: 100%">
 
 
-<script>
-    function addZero(i) {
-      if (i < 10) {i = "0" + i}
-      return i;
-    }
 
-    const d = new Date();
-    let h = addZero(d.getHours());
-    let m = addZero(d.getMinutes());
-    let s = addZero(d.getSeconds());
-    let time = h + ":" + m + ":" + s;
-    document.getElementById("demo").innerHTML = time;
-</script>
 
 <!--
  Este Portefólio foi feito com o que eu considero um bom portefólio
@@ -113,6 +101,11 @@
             {% endif %}
 
 
+            {% if request.user.is_authenticated %}
+                <a class="navbar-item" style="left:180%" href={% url 'portfolio:api' %}><strong>API</strong></a>
+            {% endif %}
+
+
 
 
             <a class="navbar-item" style="left:180%" href={% url 'portfolio:blog' %}><strong>Blog</strong></a>
@@ -136,10 +129,26 @@
 
 <nav class="navbar" style="overflow: hidden; position:fixed; bottom: 0;width: 100%;margin-top: 50px">
     <div class="navbar-brand">
-        <p class="navbar-item" id="demo"></p>
+
+        <a id="todaysDate" class="navbar-item" style="position:absolute;left: 42%"></a>
+
+        <script>
+            function doDate() {
+                let str = "";
+
+                const days = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+                const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+                const now = new Date();
+
+                str += "Hoje é: " + days[now.getDay()] + ", " + now.getDate() + " " + months[now.getMonth()] + " " + now.getFullYear() + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+                document.getElementById("todaysDate").innerHTML = str;
+            }
+
+            setInterval(doDate, 1000);
+        </script>
 
         <a style="position: center;" href="https://www.ulusofona.pt/" class="navbar-item">ULHT</a>
-
     </div>
 </nav>
 </body>

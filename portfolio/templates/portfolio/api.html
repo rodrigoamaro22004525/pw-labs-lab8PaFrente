@@ -1,6 +1,11 @@
-<!-- api.html -->
-
 {% extends 'portfolio/layout.html' %}
+
+{% block style %}
+
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/PaJS/apis.js' %}">
+
+{% endblock style %}
 
 
 
@@ -8,10 +13,14 @@
 
     <h3 class="titulo" style="color: white">API de Avisos Meteorológicos até 3 dias</h3>
 
-    <div style="background: wheat">
 
-
-
+    <div style="display: block;justify-content: center;border-radius: 10px;margin: 20px;background-color: #ffffff;border-bottom-color: #b22121;border-bottom-style: double;box-shadow: rgba(129,29,29,0.8) 5px 5px, rgb(77,19,19) 10px 10px;padding: 15px;">
+        <center>
+            <div>
+                <button onclick="coinFlip()">Flip a coin, head or Tails</button>
+                <p id="coin"></p>
+            </div>
+        </center>
     </div>
 
 
