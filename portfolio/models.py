@@ -57,6 +57,7 @@ class pontuacaoquizz(models.Model):
         Q4 -> Qual foi o primeiro tweet da google? (I’m 01100110 01100101 01100101 01101100 01101001 01101110 01100111 00100000 01101100 01110101 01100011 01101011 01111001 00001010)
         """
 
+
 class media(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='Quizz/', blank=True)
@@ -73,3 +74,29 @@ class licenciatura(models.Model):
 
     def __str__(self):
         return self.nomeCadeira
+
+
+# programação web
+class noticia(models.Model):
+    titulo = models.CharField(max_length=50)
+    descricao = models.CharField(max_length=300)
+    img = models.ImageField(upload_to='media/', null=True)
+    linkNot = models.URLField(max_length=200, blank=True)
+
+    def __str__(self):
+        return self.titulo
+
+
+class tecnologias(models.Model):
+    nome = models.CharField(max_length=50)
+    acronimo = models.CharField(max_length=5)
+    ano = models.DateTimeField(default=6 / 14 / 2022)
+    autor = models.CharField(max_length=50)
+    logo = models.ImageField(upload_to='media/', null=True)
+    linkYo = models.CharField(max_length=200, default="https://github.com/rodrigoamaro22004525?tab=repositories")
+    descricao = models.CharField(max_length=400)
+
+    def __str__(self):
+        return self.nome
+
+# programação web

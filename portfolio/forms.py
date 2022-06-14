@@ -51,7 +51,7 @@ class ProjetosForm(forms.ModelForm):
 class createuserform(UserCreationForm):
     class Meta:
         model = User
-        fields = ('username', 'password1', 'password2', )
+        fields = ('username', 'password1', 'password2',)
 
         widgets = {
             'username': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'username'}),
@@ -108,6 +108,52 @@ class licenciaturaForm(forms.ModelForm):
         labels = {
             'nomeCadeira': 'NomeDaCadeira',
             'semestre': 'Semestre',
-            'etcs':'Etcs',
+            'etcs': 'Etcs',
             'link_cadeira': 'LinkDaCadeira',
+        }
+
+
+class noticia(forms.ModelForm):
+    class Meta:
+        model = noticia
+        fields = '__all__'
+
+        widgets = {
+            'titulo': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Titulo da Noticia'}),
+            'descricao': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Descricao'}),
+            'img': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Imagem da noticia'}),
+            'linkNot': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Link da noticia'}),
+        }
+
+        labels = {
+            'titulo': 'Titulo',
+            'descricao': 'Descricao',
+            'img': 'Img',
+            'linkNot': 'LinkNot',
+        }
+
+
+class tecnologia(forms.ModelForm):
+    class Meta:
+        model = tecnologias
+        fields = '__all__'
+
+        widgets = {
+            'nome': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nome da Tecnologia'}),
+            'acronimo': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'acronimo'}),
+            'ano': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'ano'}),
+            'autor': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'autor'}),
+            'logo': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'logo'}),
+            'linkYo': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'link da tecnologia'}),
+            'descricao': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'descricao da tecnologia'}),
+        }
+
+        labels = {
+            'nome': 'Nome',
+            'acronimo': 'Acronimo',
+            'ano': 'Ano',
+            'autor': 'Autor',
+            'logo': 'Logo',
+            'linkYo': 'LinkYo',
+            'descricao': 'Descricao',
         }

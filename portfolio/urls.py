@@ -41,6 +41,7 @@ urlpatterns = [
                   path('register/', views.registerPage, name='register'),
                   path('quizz/', views.quizz_page_view, name='quizz'),
                   path('api/', views.api_page_view, name='api'),
+                  path('pw/', views.pw_page_view, name='pw'),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()

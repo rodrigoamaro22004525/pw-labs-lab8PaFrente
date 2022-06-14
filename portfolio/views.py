@@ -148,5 +148,19 @@ def quizz_page_view(request):
 
 
 def api_page_view(request):
-
     return render(request, 'portfolio/api.html')
+
+
+def pw_page_view(request):
+    if request.method == 'POST':
+        form = createuserform(request.POST)
+        if form.is_valid():
+            user = form.save()
+
+
+            return redirect('portfolio:home')
+    else:
+        form = createuserform()
+    return render(request, 'portfolio/register.html', {'form': form})
+
+    return None
