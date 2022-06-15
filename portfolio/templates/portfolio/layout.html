@@ -105,6 +105,10 @@
                 <a class="navbar-item" style="left:180%" href={% url 'portfolio:api' %}><strong>API</strong></a>
             {% endif %}
 
+            {% if request.user.is_authenticated %}
+                <a class="navbar-item" style="left:180%" href={% url 'portfolio:pw' %}><strong>Web</strong></a>
+            {% endif %}
+
 
 
 

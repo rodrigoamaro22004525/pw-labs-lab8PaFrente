@@ -115,14 +115,11 @@ class licenciaturaForm(forms.ModelForm):
 
 class noticia(forms.ModelForm):
     class Meta:
-        model = noticia
+        model = noticias
         fields = '__all__'
 
         widgets = {
-            'titulo': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Titulo da Noticia'}),
-            'descricao': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Descricao'}),
-            'img': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Imagem da noticia'}),
-            'linkNot': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Link da noticia'}),
+
         }
 
         labels = {

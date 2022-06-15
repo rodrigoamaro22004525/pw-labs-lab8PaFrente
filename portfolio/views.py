@@ -152,15 +152,6 @@ def api_page_view(request):
 
 
 def pw_page_view(request):
-    if request.method == 'POST':
-        form = createuserform(request.POST)
-        if form.is_valid():
-            user = form.save()
+    context = {'noticias': noticias.objects.all(), 'tecnologias': tecnologias.objects.all()}
 
-
-            return redirect('portfolio:home')
-    else:
-        form = createuserform()
-    return render(request, 'portfolio/register.html', {'form': form})
-
-    return None
+    return render(request, 'portfolio/pw.html', context)

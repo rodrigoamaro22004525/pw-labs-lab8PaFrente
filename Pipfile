@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "==4.0.4"
+django = "==4.0.5"
 matplotlib = "*"
 environs = {version = "==8.0.0", extras = ["django"]}
 psycopg2-binary = "*"

@@ -21,16 +21,7 @@
 }
 
 
-.delete, .modal-close, .button, .file, .breadcrumb, .pagination-previous,
-.pagination-next,
-.pagination-link,
-.pagination-ellipsis, .tabs, .is-unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
+
 
 .select:not(.is-multiple):not(.is-loading)::after, .navbar-link:not(.is-arrowless)::after {
     border: 3px solid transparent;

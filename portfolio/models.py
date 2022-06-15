@@ -77,7 +77,7 @@ class licenciatura(models.Model):
 
 
 # programação web
-class noticia(models.Model):
+class noticias(models.Model):
     titulo = models.CharField(max_length=50)
     descricao = models.CharField(max_length=300)
     img = models.ImageField(upload_to='media/', null=True)
@@ -85,6 +85,8 @@ class noticia(models.Model):
 
     def __str__(self):
         return self.titulo
+
+
 
 
 class tecnologias(models.Model):
@@ -95,6 +97,7 @@ class tecnologias(models.Model):
     logo = models.ImageField(upload_to='media/', null=True)
     linkYo = models.CharField(max_length=200, default="https://github.com/rodrigoamaro22004525?tab=repositories")
     descricao = models.CharField(max_length=400)
+    tipo = models.CharField(max_length=10)
 
     def __str__(self):
         return self.nome
