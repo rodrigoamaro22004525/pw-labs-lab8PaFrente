@@ -33,7 +33,7 @@ class Projetos(models.Model):
     gitLink = models.CharField(default="https://github.com/rodrigoamaro22004525", max_length=200)
     nome = models.CharField(max_length=50)
     linguagens = models.CharField(max_length=50)
-    imagem = models.ImageField(upload_to='media/', null=True)
+    img = models.ImageField(upload_to='media/', null=True)
 
     def __str__(self):
         return self.nome
