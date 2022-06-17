@@ -152,6 +152,6 @@ def api_page_view(request):
 
 
 def pw_page_view(request):
-    context = {'noticias': noticias.objects.all(), 'tecnologias': tecnologias.objects.all()}
+    context = {'noticias': noticias.objects.all()}
 
     return render(request, 'portfolio/pw.html', context)
