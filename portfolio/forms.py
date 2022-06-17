@@ -129,7 +129,7 @@ class noticia(forms.ModelForm):
             'linkNot': 'LinkNot',
         }
 
-
+"""
 class tecnologia(forms.ModelForm):
     class Meta:
         model = tecnologias
@@ -154,3 +154,5 @@ class tecnologia(forms.ModelForm):
             'linkYo': 'LinkYo',
             'descricao': 'Descricao',
         }
+"""
+
