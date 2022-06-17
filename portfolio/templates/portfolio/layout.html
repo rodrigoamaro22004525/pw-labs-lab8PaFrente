@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 
-<html lang="" style="height: 100%">
+<html lang="" style="height: 100%; background: black">
 
 
 
@@ -81,7 +81,7 @@
             </script>
 
 
-
+            <a class="navbar-item" style="left:180%" href={% url 'portfolio:educacao' %}><strong>Educacao</strong></a>
             <a class="navbar-item" style="left:180%" href={% url 'portfolio:contacto' %}><strong>Contacto</strong></a>
             <a class="navbar-item" style="left:180%"
                href={% url 'portfolio:licenciatura' %}><strong>Licenciatura</strong></a>
@@ -122,6 +122,8 @@
             {% if request.user.is_authenticated %}
             <a class="navbar-item" style="left:180%" href={% url 'portfolio:quizz' %}><strong>quizz</strong></a>
             {% endif %}
+
+
 
         </div>
 

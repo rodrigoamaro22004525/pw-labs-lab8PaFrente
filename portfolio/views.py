@@ -155,3 +155,7 @@ def pw_page_view(request):
     context = {'noticias': noticias.objects.all()}
 
     return render(request, 'portfolio/pw.html', context)
+
+
+def educacao_page_view(request):
+    return render(request, 'portfolio/educacao.html')

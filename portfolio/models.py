@@ -86,8 +86,8 @@ class noticias(models.Model):
     def __str__(self):
         return self.titulo
 
-"""
-    class tecnologias(models.Model):
+
+class tecnologias(models.Model):
     nome = models.CharField(max_length=50)
     acronimo = models.CharField(max_length=5)
     ano = models.DateTimeField(default=6 / 14 / 2022)
@@ -98,8 +98,5 @@ class noticias(models.Model):
 
     def __str__(self):
         return self.nome
-
-"""
-
 
 # programação web

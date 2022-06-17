@@ -1,0 +1,58 @@
+<!-- educação.html -->
+
+{% extends 'portfolio/layout.html' %}
+
+{% block style %}
+
+
+
+{% endblock style %}
+{% load static %}
+<link rel="stylesheet" href={% static 'portfolio/css/educacao.css' %}>
+
+{% block content %}
+
+    <h1 style="color: white">Hero page</h1>
+    <center>
+        <div style="display: grid;justify-content: center;border-radius: 10px;margin: 20px;background-color: #ffffff;border-bottom-color: #b22121;border-bottom-style: double;box-shadow: rgba(129,29,29,0.8) 5px 5px, rgb(77,19,19) 10px 10px;padding: 15px;">
+            <div style="display: -moz-inline-block">
+                <h1 class="subtitle">Rodrigo Amaro</h1>
+            </div>
+            <div style="display: -moz-inline-block">
+                <p style="color: black">Olá eu sou o Rodrigo Amaro, estive desde o 9-12 ano na Escola Secundária Maria
+                    Amália Vaz Carvalho</p>
+                <p style="color: black">Ainda não tenho Curso superior realizado</p>
+                <p style="color: black">Ainda não tenho Certificados</p>
+            </div>
+
+            <div style="display: -moz-inline-block">
+
+                <p style="color: black"><b style="color: black"><i style="color: black">Aqui estão os meus projetos realizados:
+                </i></b><a href={% url 'portfolio:programacao' %}> clica-me!<br><br></a></p>
+
+
+            </div>
+
+
+        </div>
+
+        <div style="display: grid;justify-content: center;border-radius: 10px;margin: 20px;background-color: #ffffff;border-bottom-color: #b22121;border-bottom-style: double;box-shadow: rgba(129,29,29,0.8) 5px 5px, rgb(77,19,19) 10px 10px;padding: 15px;">
+            <p style="color: black">
+                email: bomamo7179@tagbert.com
+            </p>
+            <br>
+            <a style="color: black" href=https://github.com/rodrigoamaro22004525>
+                github
+            </a>
+
+
+        </div>
+    </center>
+
+
+
+
+
+
+
+{% endblock content %}
