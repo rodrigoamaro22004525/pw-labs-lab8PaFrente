@@ -4,6 +4,19 @@
 
 
 {% load static %}
+<style>
+    .container12 {
+        display: inline flow-root list-item;
+        justify-content: center;
+        border-radius: 10px;
+        margin: 20px;
+        background-color: #ffffff;
+        border-bottom-color: #b22121;
+        border-bottom-style: double;
+        box-shadow: rgba(129,29,29,0.8) 5px 5px, rgb(77,19,19) 10px 10px;
+        padding: 15px;
+    }
+</style>
 <link rel="stylesheet" href={% static 'portfolio/css/sobre.css' %}>
 
 {% block content %}
@@ -14,7 +27,7 @@
     <div class="row">
         <div class="column">
             {% for projeto in programacao %}
-                <div class="container" style="display: inline flow-root list-item;justify-content: center;border-radius: 10px;margin: 20px;background-color: #ffffff;border-bottom-color: #b22121;border-bottom-style: double;box-shadow: rgba(129,29,29,0.8) 5px 5px, rgb(77,19,19) 10px 10px;padding: 15px;">
+                <div class="container12">
                     <p style="color:black">Nome: {{ projeto.nome }}.</p>
                     <p style="color:black">Linguagens: {{ projeto.linguagens }}</p>
                     <a href="{{ projeto.gitLink }}"><img width="400" height="500" sizes="small" src="{{ projeto.img.url }}" alt="">></a>
@@ -28,7 +41,7 @@
     </div>
 
 
-    
+
 </center>
 
 
