@@ -140,6 +140,7 @@ class tecnologia(forms.ModelForm):
             'acronimo': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'acronimo'}),
             'ano': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'ano'}),
             'autor': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'autor'}),
+            'logo': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'logo'}),
             'linkYo': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'link da tecnologia'}),
             'descricao': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'descricao da tecnologia'}),
         }
@@ -149,6 +150,7 @@ class tecnologia(forms.ModelForm):
             'acronimo': 'Acronimo',
             'ano': 'Ano',
             'autor': 'Autor',
+            'logo': 'Logo',
             'linkYo': 'LinkYo',
             'descricao': 'Descricao',
         }

@@ -4,14 +4,18 @@
 <link rel="stylesheet" href={% static 'portfolio/css/pw.css' %}>
 
 
+
+
 {% block content %}
 
     <div class="container">
+
         <h1 class="title" style="color: white">Notícias</h1>
 
-        <div>
+        <div id="container1">
             {% for noticia in noticias %}
-                <div class="content" style="display: inline flow-root list-item;justify-content: center;border-radius: 10px;margin: 20px;background-color: #ffffff;border-bottom-color: #b22121;border-bottom-style: double;box-shadow: rgba(129,29,29,0.8) 5px 5px, rgb(77,19,19) 10px 10px;padding: 15px;">
+                <div class="content"
+                     style="display: inline flow-root list-item;justify-content: center;border-radius: 10px;margin: 20px;background-color: #ffffff;border-bottom-color: #b22121;border-bottom-style: double;box-shadow: rgba(129,29,29,0.8) 5px 5px, rgb(77,19,19) 10px 10px;padding: 15px;">
                     <strong style="position:relative;bottom: -3px;"> {{ noticia.titulo }}</strong>
                     <br><br>
                     {% load static %}
@@ -30,21 +34,26 @@
 
         <div>
             {% for tecnologia in tecnologias %}
-                <div class="content" style="display: inline flow-root list-item;justify-content: center;border-radius: 10px;margin: 20px;background-color: #ffffff;border-bottom-color: #b22121;border-bottom-style: double;box-shadow: rgba(129,29,29,0.8) 5px 5px, rgb(77,19,19) 10px 10px;padding: 15px;">
-                    <strong style="position:relative;bottom: -3px;"> {{ tecnologia.nome }}</strong>
+                <div class="content"
+                     style="display: inline flow-root list-item;justify-content: center;border-radius: 10px;margin: 20px;background-color: #ffffff;border-bottom-color: #b22121;border-bottom-style: double;box-shadow: rgba(129,29,29,0.8) 5px 5px, rgb(77,19,19) 10px 10px;padding: 15px;">
+                    {% load static %}
+                    <img src="{{ tecnologia.logo }}" alt="">
+                    
+                    <strong class="subtitle" style="position:relative;bottom: -3px">nome: {{ tecnologia.nome }}</strong>
                     <br><br>
-                    <p>{{ tecnologia.acronimo }}</p>
-                    <p>{{ tecnologia.ano }}</p>
-                    <p>{{ tecnologia.autor }}</p>
-                    <p>{{ tecnologia.linkYo }}</p>
-                    <p>{{ tecnologia.descricao }}</p>
+                    <p style="color: black">Acronimo: {{ tecnologia.acronimo }}</p>
+                    <p style="color: black">Ano: {{ tecnologia.date }}</p>
+                    <p style="color: black">Autor: {{ tecnologia.autor }}</p>
+                    <p style="color: black">Link: {{ tecnologia.linkYo }}</p>
+                    <p style="color: black">Descrição: {{ tecnologia.descricao }}</p>
+                    <p></p>
 
                 </div>
             {% endfor %}
 
         </div>
     </div>
-
+    <br><br><br><br><br>
 
 {% endblock %}
 
