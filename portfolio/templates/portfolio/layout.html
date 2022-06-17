@@ -109,6 +109,11 @@
                 <a class="navbar-item" style="left:180%" href={% url 'portfolio:pw' %}><strong>Web</strong></a>
             {% endif %}
 
+            {% if request.user.is_authenticated %}
+                <a class="navbar-item" style="left:180%" href=https://pw-lab1-22004525.herokuapp.com/><strong>Outros Labs</strong></a>
+            {% endif %}
+
+
 
 
 
