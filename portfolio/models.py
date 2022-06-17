@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from datetime import datetime
 
 
 class Portfolio(models.Model):
@@ -87,6 +88,16 @@ class noticias(models.Model):
         return self.titulo
 
 
+class tecnologias(models.Model):
+    nome = models.CharField(max_length=50)
+    acronimo = models.CharField(max_length=5)
+    date = models.DateTimeField(default=datetime.now, blank=True)
+    autor = models.CharField(max_length=50)
+    logo = models.ImageField(upload_to='media/', null=True)
+    linkYo = models.CharField(max_length=200, default="https://github.com/rodrigoamaro22004525?tab=repositories")
+    descricao = models.CharField(max_length=400)
 
+    def __str__(self):
+        return self.nome
 
 # programação web

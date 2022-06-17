@@ -24,28 +24,26 @@
     </div>
 
     <br><br><br><br><br><br><br>
-<!--
+
     <div class="container">
         <h1 class="title" style="color: white">Tecnologias</h1>
 
         <div>
-            { for tecnologia in tecnologias %}
+            {% for tecnologia in tecnologias %}
                 <div class="content" style="display: inline flow-root list-item;justify-content: center;border-radius: 10px;margin: 20px;background-color: #ffffff;border-bottom-color: #b22121;border-bottom-style: double;box-shadow: rgba(129,29,29,0.8) 5px 5px, rgb(77,19,19) 10px 10px;padding: 15px;">
                     <strong style="position:relative;bottom: -3px;"> {{ tecnologia.nome }}</strong>
                     <br><br>
                     <p>{{ tecnologia.acronimo }}</p>
                     <p>{{ tecnologia.ano }}</p>
                     <p>{{ tecnologia.autor }}</p>
-                    <p>{{ tecnologia.logo }}</p>
                     <p>{{ tecnologia.linkYo }}</p>
                     <p>{{ tecnologia.descricao }}</p>
 
                 </div>
-            { endfor %}
+            {% endfor %}
 
         </div>
     </div>
-    -->
 
 
 {% endblock %}

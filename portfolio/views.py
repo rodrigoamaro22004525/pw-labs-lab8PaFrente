@@ -22,11 +22,6 @@ def apresentacao_page_view(request):
     return render(request, 'portfolio/layout.html')
 
 
-# Contacto
-def contacto_page_view(request):
-    return render(request, 'portfolio/contacto.html')
-
-
 # Licenciatura
 def licenciatura_page_view(request):
     context = {
@@ -152,7 +147,7 @@ def api_page_view(request):
 
 
 def pw_page_view(request):
-    context = {'noticias': noticias.objects.all()}
+    context = {'noticias': noticias.objects.all(), 'tecnologias': tecnologias.objects.all()}
 
     return render(request, 'portfolio/pw.html', context)
 

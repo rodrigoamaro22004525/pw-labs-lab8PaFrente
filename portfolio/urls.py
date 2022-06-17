@@ -29,7 +29,6 @@ name = "home"
 urlpatterns = [
                   path('', views.home_page_view, name=''),
                   path('home/', views.home_page_view, name='home'),
-                  path('contacto/', views.contacto_page_view, name='contacto'),
                   path('licenciatura/', views.licenciatura_page_view, name='licenciatura'),
                   path('blog/', views.blog_page_view, name='blog'),
                   path('post_detail/<slug:slug>/', views.post_detail, name='post_detail'),

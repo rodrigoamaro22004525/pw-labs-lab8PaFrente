@@ -11,4 +11,6 @@ admin.site.register(pontuacaoquizz)
 admin.site.register(media)
 admin.site.register(licenciatura)
 admin.site.register(noticias)
+admin.site.register(tecnologias)
+
 
