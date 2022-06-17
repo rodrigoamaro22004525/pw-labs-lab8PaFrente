@@ -101,3 +101,4 @@ class tecnologias(models.Model):
         return self.nome
 
 # programação web
+

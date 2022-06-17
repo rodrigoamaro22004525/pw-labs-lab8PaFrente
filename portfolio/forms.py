@@ -155,4 +155,3 @@ class tecnologia(forms.ModelForm):
             'descricao': 'Descricao',
         }
 
-
