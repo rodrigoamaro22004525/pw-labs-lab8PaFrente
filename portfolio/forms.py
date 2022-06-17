@@ -130,5 +130,27 @@ class noticia(forms.ModelForm):
         }
 
 
+class tecnologia(forms.ModelForm):
+    class Meta:
+        model = tecnologias
+        fields = '__all__'
+
+        widgets = {
+            'nome': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nome da Tecnologia'}),
+            'acronimo': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'acronimo'}),
+            'ano': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'ano'}),
+            'autor': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'autor'}),
+            'linkYo': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'link da tecnologia'}),
+            'descricao': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'descricao da tecnologia'}),
+        }
+
+        labels = {
+            'nome': 'Nome',
+            'acronimo': 'Acronimo',
+            'ano': 'Ano',
+            'autor': 'Autor',
+            'linkYo': 'LinkYo',
+            'descricao': 'Descricao',
+        }
 
 
